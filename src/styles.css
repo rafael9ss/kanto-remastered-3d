@@ -24,10 +24,13 @@
   --color-poke-red: var(--poke-red);
   --color-poke-blue: var(--poke-blue);
   --color-poke-yellow: var(--poke-yellow);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-cream: var(--cream);
-  --color-cream-dim: var(--cream-dim);
+  --color-aqua: var(--aqua);
+  --color-aqua-deep: var(--aqua-deep);
+  --color-navy: var(--navy);
+  --color-body: var(--body);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+
 
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
