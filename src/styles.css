@@ -184,3 +184,17 @@
   -webkit-text-stroke: 2px var(--navy);
   paint-order: stroke fill;
 }
+
+@keyframes cta-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.035);
+  }
+}
+
+@utility animate-cta-pulse {
+  animation: cta-pulse 1.6s ease-in-out infinite;
+}
