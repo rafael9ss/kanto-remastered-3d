@@ -55,21 +55,21 @@ export function Oferta() {
 
       <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.25fr] lg:items-start lg:gap-8">
         {/* Básico */}
-        <div className="order-2 rounded-3xl border border-navy/20 bg-surface/60 p-5 opacity-70 grayscale-[0.35] transition-opacity hover:opacity-100 hover:grayscale-0 lg:order-1 lg:mt-14 lg:scale-95">
+        <div className="order-2 rounded-3xl border border-navy/20 bg-surface/60 p-5 lg:order-1 lg:mt-14 lg:scale-95">
           <h3 className="font-display text-base text-navy/70 uppercase">Plano Básico</h3>
           <p className="mt-1 text-xs font-semibold text-body/70">Pokémon 3D Remastered</p>
-          <ul className="mt-4 grid gap-2 text-sm opacity-80">
+          <ul className="mt-4 grid gap-2 text-sm">
             {base.map((i) => (
               <Check key={i}>{i}</Check>
             ))}
             <li className="flex items-start gap-3 text-body/70">
-              <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-navy/25 text-[11px] font-black text-surface">
+              <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-poke-red text-[11px] font-black text-surface">
                 ✕
               </span>
               <span className="text-[14px]">Sem Atualizações</span>
             </li>
           </ul>
-          <div className="mt-5 opacity-80">
+          <div className="mt-5">
             <Price from="R$ 97" to="R$ 17,90" />
           </div>
           <div className="mt-4">
