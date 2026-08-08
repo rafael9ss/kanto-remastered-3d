@@ -5,70 +5,59 @@ import { ball } from "./data";
 
 export function Hero() {
   return (
-    <header className="relative overflow-hidden">
-      <img
-        src={heroCity.url}
-        alt="Cidade de Kanto remasterizada em 3D ao pôr do sol"
-        className="absolute inset-0 size-full object-cover opacity-35"
-        width={1500}
-        height={600}
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/85 to-ink" />
+    <header className="bg-kanto">
+      <div className="bg-poke-red px-4 py-2.5 text-center text-[11px] font-black tracking-[0.12em] text-surface uppercase sm:text-xs">
+        ● Oferta válida hoje ● Acesso imediato após a compra
+      </div>
 
-      <div className="relative mx-auto w-full max-w-5xl px-5 pt-12 pb-16 sm:pt-20 sm:pb-24">
-        <div className="mb-6 flex flex-wrap items-center gap-2">
-          <span className="rounded-full border border-poke-yellow/40 bg-poke-yellow/10 px-3 py-1 text-[11px] font-bold tracking-[0.18em] text-poke-yellow uppercase">
-            Pokémon 3D Remastered 2026
-          </span>
-          <span className="rounded-full border border-cream/15 px-3 py-1 text-[11px] font-semibold tracking-wide text-cream-dim uppercase">
-            Red. Blue. Yellow.
-          </span>
-        </div>
+      <div className="mx-auto w-full max-w-5xl px-5 pt-10 pb-16 text-center sm:pt-16 sm:pb-24">
+        <p className="inline-block -rotate-1 rounded-full border-2 border-navy bg-surface px-4 py-1.5 font-display text-xs text-navy uppercase">
+          Pokémon 3D Remastered 2026
+        </p>
 
-        <h1 className="font-display text-[2rem] leading-[1.05] text-cream uppercase sm:text-6xl">
-          Reviva Pokémon Red, Blue e Yellow em <span className="text-poke-yellow">3D</span> — Agora
-          no Android, iOS e PC
+        <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase drop-shadow-[0_4px_0_var(--aqua-deep)] sm:text-6xl">
+          Reviva Pokémon Red, Blue e Yellow em{" "}
+          <span className="inline-block rounded-xl border-2 border-navy bg-poke-yellow px-3 text-navy drop-shadow-none">
+            3D
+          </span>{" "}
+          — Agora no Android, iOS e PC
         </h1>
 
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-cream-dim sm:text-lg">
+        <p className="mx-auto mt-5 max-w-2xl rounded-full border-2 border-poke-yellow bg-surface px-5 py-3 text-sm font-bold text-poke-blue sm:text-base">
           O Pokémon da sua infância com visual remasterizado em 3D, pronto para você instalar e
           voltar para Kanto em minutos.
         </p>
 
-        <div className="mt-8 grid gap-6 sm:grid-cols-[1.6fr_1fr] sm:items-center">
-          {/* Espaço reservado para a VSL */}
-          <div className="relative aspect-video w-full overflow-hidden rounded-3xl border border-cream/15 bg-ink-soft shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
-            <img
-              src={heroCity.url}
-              alt="Prévia do Pokémon Red, Blue e Yellow remasterizados em 3D"
-              className="size-full object-cover opacity-60"
-              width={1500}
-              height={600}
-            />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-              <span className="flex size-16 items-center justify-center rounded-full bg-poke-red text-2xl text-cream shadow-lg">
-                ▶
-              </span>
-              <span className="text-xs font-bold tracking-[0.2em] text-cream uppercase">
-                Assista ao vídeo
-              </span>
-            </div>
-          </div>
-
+        {/* Espaço reservado para a VSL */}
+        <div className="relative mx-auto mt-8 aspect-video w-full max-w-3xl overflow-hidden rounded-3xl border-4 border-navy bg-navy shadow-[0_10px_0_0_rgba(0,0,0,0.25)]">
           <img
-            src={phone.url}
-            alt="Pokémon em 3D rodando no celular"
-            className="mx-auto w-44 rounded-3xl border border-cream/10 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] sm:w-full"
-            width={333}
-            height={592}
+            src={heroCity.url}
+            alt="Prévia do Pokémon Red, Blue e Yellow remasterizados em 3D"
+            className="size-full object-cover opacity-80"
+            width={1500}
+            height={600}
           />
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
+            <span className="flex size-16 items-center justify-center rounded-full border-2 border-navy bg-poke-red text-2xl text-surface">
+              ▶
+            </span>
+            <span className="font-display text-xs text-surface uppercase">Assista ao vídeo</span>
+          </div>
         </div>
 
-        <div className="mt-8">
+        <img
+          src={phone.url}
+          alt="Pokémon em 3D rodando no celular"
+          className="mx-auto mt-8 w-52 rounded-3xl border-4 border-navy sm:w-64"
+          width={333}
+          height={592}
+        />
+
+        <div className="mx-auto mt-8 max-w-xl">
           <Cta>Quero reviver Pokémon em 3D</Cta>
         </div>
 
-        <div className="mt-6 flex flex-wrap justify-center gap-3">
+        <div className="mt-6 flex flex-wrap justify-center gap-2">
           {[
             { l: "Android", i: ball.poke },
             { l: "iOS", i: ball.great },
@@ -76,12 +65,16 @@ export function Hero() {
           ].map((b) => (
             <span
               key={b.l}
-              className="flex items-center gap-2 rounded-full border border-cream/15 bg-ink-soft/80 px-4 py-2 text-xs font-bold tracking-wide text-cream uppercase"
+              className="flex items-center gap-2 rounded-full border-2 border-navy bg-surface px-4 py-2 text-xs font-black text-navy uppercase"
             >
               <img src={b.i} alt="" className="size-4" width={16} height={16} /> {b.l}
             </span>
           ))}
         </div>
+
+        <p className="mt-6 font-display text-sm text-surface uppercase drop-shadow-[0_2px_0_var(--aqua-deep)]">
+          Red. Blue. Yellow. A mesma nostalgia. Uma nova experiência.
+        </p>
 
         <div className="mt-6">
           <Seals />
