@@ -166,3 +166,21 @@
     color: var(--color-foreground);
   }
 }
+
+@utility bg-kanto {
+  background-color: var(--aqua);
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      color-mix(in oklab, white 14%, transparent) 0px,
+      color-mix(in oklab, white 14%, transparent) 14px,
+      transparent 14px,
+      transparent 28px
+    ),
+    linear-gradient(140deg, oklch(0.82 0.13 235), oklch(0.87 0.13 190));
+}
+
+@utility text-stroke-navy {
+  -webkit-text-stroke: 2px var(--navy);
+  paint-order: stroke fill;
+}
