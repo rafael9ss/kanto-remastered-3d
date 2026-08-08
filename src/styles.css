@@ -19,6 +19,16 @@
  */
 
 @theme inline {
+  --font-display: "Archivo Black", system-ui, sans-serif;
+  --font-sans: "Barlow", system-ui, sans-serif;
+  --color-poke-red: var(--poke-red);
+  --color-poke-blue: var(--poke-blue);
+  --color-poke-yellow: var(--poke-yellow);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-cream: var(--cream);
+  --color-cream-dim: var(--cream-dim);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -62,6 +72,14 @@
 }
 
 :root {
+  --poke-red: oklch(0.57 0.22 29);
+  --poke-blue: oklch(0.52 0.17 254);
+  --poke-yellow: oklch(0.86 0.17 92);
+  --ink: oklch(0.16 0.015 265);
+  --ink-soft: oklch(0.22 0.02 265);
+  --cream: oklch(0.97 0.008 95);
+  --cream-dim: oklch(0.78 0.015 95);
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
