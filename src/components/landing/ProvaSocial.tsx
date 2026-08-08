@@ -48,7 +48,7 @@ export function ProvaSocial() {
               />
             </div>
             <figcaption className="mt-2 text-center text-xs font-black uppercase tracking-wide text-navy/70">
-              Print real do WhatsApp
+              {"\n"}
             </figcaption>
           </figure>
         ))}
