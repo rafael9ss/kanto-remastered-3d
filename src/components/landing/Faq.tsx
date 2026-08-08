@@ -9,24 +9,30 @@ import { faq } from "./data";
 
 export function Faq() {
   return (
-    <Section id="faq" className="bg-ink">
-      <Eyebrow>Perguntas frequentes</Eyebrow>
-      <Title>FAQ</Title>
+    <Section id="faq" variant="light">
+      <div className="text-center">
+        <Eyebrow>Perguntas frequentes</Eyebrow>
+        <Title onAqua={false}>FAQ</Title>
+      </div>
 
       <Accordion type="single" collapsible className="mt-8 w-full">
         {faq.map((f, i) => (
-          <AccordionItem key={f.q} value={`item-${i}`} className="border-cream/10">
-            <AccordionTrigger className="py-6 text-left font-display text-base text-cream uppercase hover:no-underline">
+          <AccordionItem
+            key={f.q}
+            value={`item-${i}`}
+            className="mb-3 rounded-2xl border-2 border-navy bg-surface px-5"
+          >
+            <AccordionTrigger className="py-5 text-left font-display text-sm text-navy uppercase hover:no-underline sm:text-base">
               {f.q}
             </AccordionTrigger>
-            <AccordionContent className="pb-6 text-[15px] leading-relaxed text-cream-dim">
+            <AccordionContent className="pb-5 text-[15px] leading-relaxed text-body">
               {f.a}
             </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>
 
-      <div className="mt-12">
+      <div className="mx-auto mt-12 max-w-xl">
         <Cta>Quero reviver Pokémon em 3D</Cta>
       </div>
       <div className="mt-6">

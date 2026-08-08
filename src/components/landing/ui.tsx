@@ -15,10 +15,8 @@ export function Cta({
     <a
       href={href}
       className={cn(
-        "block w-full rounded-2xl px-6 py-5 text-center font-display text-lg leading-tight tracking-wide uppercase shadow-[0_10px_0_0_rgba(0,0,0,0.35)] transition-transform active:translate-y-1 active:shadow-[0_4px_0_0_rgba(0,0,0,0.35)] sm:text-xl",
-        tone === "yellow"
-          ? "bg-poke-yellow text-ink hover:brightness-105"
-          : "bg-poke-red text-cream hover:brightness-110",
+        "block w-full rounded-full border-2 border-navy px-6 py-5 text-center font-display text-base leading-tight tracking-wide uppercase shadow-[0_6px_0_0_var(--navy)] transition-transform hover:-translate-y-0.5 active:translate-y-1 active:shadow-[0_2px_0_0_var(--navy)] sm:text-xl",
+        tone === "yellow" ? "bg-poke-yellow text-navy" : "bg-poke-red text-surface",
         className,
       )}
     >
@@ -31,13 +29,22 @@ export function Section({
   id,
   children,
   className,
+  variant = "aqua",
 }: {
   id?: string;
   children: React.ReactNode;
   className?: string;
+  variant?: "aqua" | "light";
 }) {
   return (
-    <section id={id} className={cn("px-5 py-16 sm:py-24", className)}>
+    <section
+      id={id}
+      className={cn(
+        "px-5 py-16 sm:py-24",
+        variant === "aqua" ? "bg-kanto" : "bg-surface-2",
+        className,
+      )}
+    >
       <div className="mx-auto w-full max-w-5xl">{children}</div>
     </section>
   );
@@ -45,17 +52,26 @@ export function Section({
 
 export function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <p className="mb-4 text-xs font-bold tracking-[0.25em] text-poke-yellow uppercase">
+    <p className="mb-4 inline-block rounded-full bg-poke-yellow px-4 py-1.5 text-[11px] font-black tracking-[0.18em] text-navy uppercase shadow-[0_3px_0_0_var(--navy)]">
       {children}
     </p>
   );
 }
 
-export function Title({ children, className }: { children: React.ReactNode; className?: string }) {
+export function Title({
+  children,
+  className,
+  onAqua = true,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  onAqua?: boolean;
+}) {
   return (
     <h2
       className={cn(
-        "font-display text-3xl leading-[1.05] text-cream uppercase sm:text-5xl",
+        "font-display text-3xl leading-[1.05] uppercase sm:text-5xl",
+        onAqua ? "text-surface drop-shadow-[0_3px_0_var(--aqua-deep)]" : "text-navy",
         className,
       )}
     >
@@ -66,8 +82,8 @@ export function Title({ children, className }: { children: React.ReactNode; clas
 
 export function Check({ children }: { children: React.ReactNode }) {
   return (
-    <li className="flex items-start gap-3 text-cream-dim">
-      <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-poke-yellow text-[11px] font-black text-ink">
+    <li className="flex items-start gap-3 text-body">
+      <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-poke-blue text-[11px] font-black text-surface">
         ✓
       </span>
       <span className="text-[15px] leading-relaxed">{children}</span>
@@ -77,27 +93,54 @@ export function Check({ children }: { children: React.ReactNode }) {
 
 export function Price({ from, to }: { from: string; to: string }) {
   return (
-    <div className="rounded-2xl border border-cream/10 bg-ink p-5 text-center">
-      <p className="text-sm text-cream-dim">
+    <div className="rounded-3xl border-2 border-navy bg-poke-yellow p-5 text-center">
+      <p className="text-sm font-semibold text-navy/80">
         De <span className="line-through">{from}</span> por apenas
       </p>
-      <p className="font-display text-4xl text-poke-yellow sm:text-5xl">{to}</p>
+      <p className="font-display text-4xl text-navy sm:text-5xl">{to}</p>
     </div>
   );
 }
 
-export function Seals() {
+export function Seals({ light = false }: { light?: boolean }) {
   return (
-    <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[11px] font-semibold tracking-wide text-cream-dim uppercase">
-      <li className="flex items-center gap-2">
-        <span className="text-poke-yellow">🔒</span> Compra 100% segura
-      </li>
-      <li className="flex items-center gap-2">
-        <span className="text-poke-yellow">🛡️</span> Garantia de 14 dias
-      </li>
-      <li className="flex items-center gap-2">
-        <span className="text-poke-yellow">📱</span> Android · iOS · PC
-      </li>
+    <ul
+      className={cn(
+        "flex flex-wrap items-center justify-center gap-2 text-[11px] font-black tracking-wide uppercase",
+        light ? "text-navy" : "text-navy",
+      )}
+    >
+      {[
+        { i: "🔒", t: "Compra 100% segura" },
+        { i: "🛡️", t: "Garantia de 14 dias" },
+        { i: "📱", t: "Android · iOS · PC" },
+      ].map((s) => (
+        <li
+          key={s.t}
+          className="flex items-center gap-2 rounded-full border-2 border-navy bg-surface px-3 py-1.5"
+        >
+          <span>{s.i}</span> {s.t}
+        </li>
+      ))}
     </ul>
+  );
+}
+
+export function Card({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) {
+  return (
+    <div
+      className={cn(
+        "rounded-3xl border-2 border-navy bg-surface p-5 shadow-[0_6px_0_0_var(--navy)]",
+        className,
+      )}
+    >
+      {children}
+    </div>
   );
 }
