@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 
 function LandingPage() {
   return (
-    <main className="min-h-screen bg-ink font-sans text-cream antialiased">
+    <main className="min-h-screen bg-surface-2 font-sans text-body antialiased">
       <Hero />
       <Recebe />
       <Nostalgia />
@@ -39,16 +39,16 @@ function LandingPage() {
       <Garantia />
       <Faq />
 
-      <footer className="border-t border-cream/10 bg-ink px-5 py-10 text-center">
-        <p className="font-display text-sm text-cream uppercase">Pokémon 3D Remastered 2026</p>
-        <p className="mt-2 text-sm text-cream-dim">
+      <footer className="bg-navy px-5 py-10 text-center">
+        <p className="font-display text-sm text-surface uppercase">Pokémon 3D Remastered 2026</p>
+        <p className="mt-2 text-sm text-surface/70">
           Red. Blue. Yellow. A mesma nostalgia. Uma nova experiência.
         </p>
       </footer>
 
       {/* CTA fixo mobile */}
-      <div className="sticky bottom-0 z-40 border-t border-cream/10 bg-ink/95 p-3 backdrop-blur sm:hidden">
-        <Cta className="py-4 text-base">Quero reviver Pokémon em 3D</Cta>
+      <div className="sticky bottom-0 z-40 border-t-2 border-navy bg-surface/95 p-3 backdrop-blur sm:hidden">
+        <Cta className="py-4 text-sm">Quero reviver Pokémon em 3D</Cta>
       </div>
     </main>
   );
