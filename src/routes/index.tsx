@@ -8,6 +8,7 @@ import { Oferta } from "@/components/landing/Oferta";
 import { Garantia } from "@/components/landing/Garantia";
 import { Faq } from "@/components/landing/Faq";
 import { Cta } from "@/components/landing/ui";
+import { SalesNotifications } from "@/components/landing/SalesNotifications";
 
 const title = "Pokémon 3D Remastered 2026 — Red, Blue e Yellow em 3D";
 const description =
