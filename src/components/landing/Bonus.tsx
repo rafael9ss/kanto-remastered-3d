@@ -1,38 +1,44 @@
-import { Section, Eyebrow, Title, Cta } from "./ui";
+import { Section, Eyebrow, Title, Cta, Card } from "./ui";
 import { bonus } from "./data";
 
 export function Bonus() {
   return (
-    <Section id="bonus" className="bg-ink-soft">
-      <Eyebrow>Bônus</Eyebrow>
-      <Title>E você ainda recebe 5 bônus</Title>
+    <Section id="bonus" variant="aqua">
+      <div className="text-center">
+        <Eyebrow>Bônus</Eyebrow>
+        <Title>E você ainda recebe 5 bônus</Title>
+      </div>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
         {bonus.map((b) => (
-          <article
-            key={b.titulo}
-            className="flex gap-4 rounded-3xl border border-cream/10 bg-ink p-5"
-          >
-            <img src={b.art} alt="" loading="lazy" className="size-16 shrink-0" width={64} height={64} />
+          <Card key={b.titulo} className="flex gap-4">
+            <img
+              src={b.art}
+              alt=""
+              loading="lazy"
+              className="size-16 shrink-0"
+              width={64}
+              height={64}
+            />
             <div>
-              <h3 className="font-display text-sm leading-tight text-cream uppercase">{b.titulo}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-cream-dim">{b.desc}</p>
-              <p className="mt-3 text-sm font-bold text-cream-dim">
+              <h3 className="font-display text-sm leading-tight text-navy uppercase">{b.titulo}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-body">{b.desc}</p>
+              <p className="mt-3 text-sm font-bold text-body">
                 Valor: <span className="line-through">{b.valor}</span>{" "}
-                <span className="ml-1 rounded-md bg-poke-yellow px-2 py-1 text-xs font-black text-ink">
+                <span className="ml-1 rounded-md border-2 border-navy bg-poke-yellow px-2 py-0.5 text-xs font-black text-navy">
                   GRÁTIS
                 </span>
               </p>
             </div>
-          </article>
+          </Card>
         ))}
       </div>
 
-      <p className="mt-8 text-center font-display text-2xl text-poke-yellow uppercase">
+      <p className="mt-8 text-center font-display text-2xl text-surface uppercase drop-shadow-[0_3px_0_var(--aqua-deep)]">
         R$ 255 em bônus incluídos
       </p>
 
-      <div className="mt-8">
+      <div className="mx-auto mt-8 max-w-xl">
         <Cta>Quero reviver Pokémon em 3D</Cta>
       </div>
     </Section>
