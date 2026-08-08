@@ -46,9 +46,9 @@ export function Oferta() {
         </div>
       </div>
 
-      <div className="mt-10 grid gap-8 lg:grid-cols-2 lg:items-start">
+      <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.25fr] lg:items-start lg:gap-8">
         {/* Básico */}
-        <div className="rounded-3xl border-2 border-navy bg-surface p-6 shadow-[0_6px_0_0_var(--navy)]">
+        <div className="order-2 rounded-3xl border-2 border-navy bg-surface p-6 opacity-95 shadow-[0_6px_0_0_var(--navy)] lg:order-1 lg:mt-8">
           <h3 className="font-display text-xl text-navy uppercase">Plano Básico</h3>
           <p className="mt-1 text-sm font-semibold text-body">Pokémon 3D Remastered</p>
           <ul className="mt-6 grid gap-3">
@@ -73,55 +73,58 @@ export function Oferta() {
         </div>
 
         {/* Premium */}
-        <div className="relative rounded-3xl border-4 border-poke-yellow bg-surface p-6 shadow-[0_8px_0_0_var(--navy)]">
-          <span className="absolute -top-4 left-6 rounded-full border-2 border-navy bg-poke-red px-3 py-1 text-[11px] font-black tracking-wide text-surface uppercase">
-            Mais completo
+        <div className="relative order-1 rounded-[2rem] border-4 border-navy bg-poke-yellow p-2 shadow-[0_14px_0_0_var(--navy)] lg:order-2 lg:-mt-4 lg:scale-[1.03]">
+          <span className="absolute -top-5 left-1/2 z-10 -translate-x-1/2 rounded-full border-2 border-navy bg-poke-red px-5 py-2 text-[11px] font-black tracking-[0.14em] text-surface uppercase shadow-[0_4px_0_0_var(--navy)] sm:text-xs">
+            ★ Mais completo · Mais vendido
           </span>
-          <h3 className="font-display text-xl text-navy uppercase">Plano Premium</h3>
-          <p className="mt-1 text-sm font-semibold text-body">
-            Pokémon 3D Remastered + Pacote Clássico
-          </p>
 
-          <p className="mt-6 text-xs font-black tracking-[0.18em] text-poke-blue uppercase">
-            Tudo do plano básico
-          </p>
-          <ul className="mt-3 grid gap-3">
-            {base.map((i) => (
-              <Check key={i}>{i}</Check>
-            ))}
-            <Check>Atualizações constantes</Check>
-          </ul>
+          <div className="rounded-[1.6rem] border-2 border-navy bg-surface p-6 pt-8">
+            <h3 className="font-display text-2xl text-navy uppercase sm:text-3xl">Plano Premium</h3>
+            <p className="mt-1 text-sm font-semibold text-body">
+              Pokémon 3D Remastered + Pacote Clássico
+            </p>
 
-          <p className="mt-6 text-xs font-black tracking-[0.18em] text-poke-blue uppercase">
-            + Todos os bônus
-          </p>
-          <ul className="mt-3 grid gap-3">
-            {bonus.map((b) => (
-              <Check key={b.titulo}>
-                {b.titulo.replace(/^Bônus \d — /, "")} —{" "}
-                <span className="line-through">{b.valor}</span> ·{" "}
-                <strong className="text-poke-red">GRÁTIS</strong>
-              </Check>
-            ))}
-          </ul>
+            <p className="mt-6 text-xs font-black tracking-[0.18em] text-poke-blue uppercase">
+              Tudo do plano básico
+            </p>
+            <ul className="mt-3 grid gap-3">
+              {base.map((i) => (
+                <Check key={i}>{i}</Check>
+              ))}
+              <Check>Atualizações constantes</Check>
+            </ul>
 
-          <p className="mt-6 text-center font-display text-lg text-poke-red uppercase">
-            R$ 255 em bônus incluídos
-          </p>
+            <p className="mt-6 text-xs font-black tracking-[0.18em] text-poke-blue uppercase">
+              + Todos os bônus
+            </p>
+            <ul className="mt-3 grid gap-3">
+              {bonus.map((b) => (
+                <Check key={b.titulo}>
+                  {b.titulo.replace(/^Bônus \d — /, "")} —{" "}
+                  <span className="line-through">{b.valor}</span> ·{" "}
+                  <strong className="text-poke-red">GRÁTIS</strong>
+                </Check>
+              ))}
+            </ul>
 
-          <div className="mt-4">
-            <Price from="R$ 197" to="R$ 29,90" />
+            <p className="mt-6 rounded-2xl border-2 border-navy bg-poke-red px-4 py-3 text-center font-display text-base text-surface uppercase sm:text-lg">
+              R$ 255 em bônus incluídos
+            </p>
+
+            <div className="mt-4">
+              <Price from="R$ 197" to="R$ 29,90" />
+            </div>
+            <p className="mt-2 text-center text-sm font-semibold text-body">Pagamento único.</p>
+
+            <div className="mt-5">
+              <CheckoutButton href={CHECKOUT_PREMIUM} tone="yellow">
+                Quero o plano premium
+              </CheckoutButton>
+            </div>
+            <p className="mt-3 text-center text-sm font-semibold text-body">
+              Garantia incondicional de 14 dias.
+            </p>
           </div>
-          <p className="mt-2 text-center text-sm font-semibold text-body">Pagamento único.</p>
-
-          <div className="mt-5">
-            <CheckoutButton href={CHECKOUT_PREMIUM} tone="yellow">
-              Quero o plano premium
-            </CheckoutButton>
-          </div>
-          <p className="mt-3 text-center text-sm font-semibold text-body">
-            Garantia incondicional de 14 dias.
-          </p>
         </div>
       </div>
 

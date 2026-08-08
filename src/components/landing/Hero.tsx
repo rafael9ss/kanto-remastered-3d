@@ -21,7 +21,9 @@ export function Hero() {
         />
 
         <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase drop-shadow-[0_4px_0_var(--aqua-deep)] sm:text-6xl">
-          Reviva Pokémon Red, Blue e Yellow em{" "}
+          Reviva Pokémon <span className="text-poke-red">Red</span>,{" "}
+          <span className="text-poke-blue">Blue</span> e{" "}
+          <span className="text-poke-yellow">Yellow</span> em{" "}
           <span className="inline-block rounded-xl border-2 border-navy bg-poke-yellow px-3 text-navy drop-shadow-none">
             3D
           </span>{" "}
@@ -78,7 +80,8 @@ export function Hero() {
         </div>
 
         <p className="mt-6 font-display text-sm text-surface uppercase drop-shadow-[0_2px_0_var(--aqua-deep)]">
-          Red. Blue. Yellow. A mesma nostalgia. Uma nova experiência.
+          <span className="text-poke-red">Red.</span> <span className="text-poke-blue">Blue.</span>{" "}
+          <span className="text-poke-yellow">Yellow.</span> A mesma nostalgia. Uma nova experiência.
         </p>
 
         <div className="mt-6">
