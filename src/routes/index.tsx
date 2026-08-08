@@ -51,6 +51,8 @@ function LandingPage() {
       <div className="sticky bottom-0 z-40 border-t-2 border-navy bg-surface/95 p-3 backdrop-blur sm:hidden">
         <Cta className="py-4 text-sm">Quero reviver Pokémon em 3D</Cta>
       </div>
+
+      <SalesNotifications />
     </main>
   );
 }
