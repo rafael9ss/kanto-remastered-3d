@@ -15,17 +15,24 @@ function CheckoutButton({
   href,
   children,
   tone,
+  pulse = true,
 }: {
   href: string;
   children: React.ReactNode;
-  tone: "yellow" | "red";
+  tone: "yellow" | "red" | "muted";
+  pulse?: boolean;
 }) {
   return (
     <a
       href={href}
       className={cn(
-        "block w-full rounded-full border-2 border-navy px-6 py-5 text-center font-display text-base uppercase shadow-[0_6px_0_0_var(--navy)] transition-transform hover:-translate-y-0.5 active:translate-y-1 active:shadow-[0_2px_0_0_var(--navy)] sm:text-lg",
-        tone === "yellow" ? "bg-poke-yellow text-navy" : "bg-poke-red text-surface",
+        "block w-full rounded-full border-2 px-6 py-5 text-center font-display text-base uppercase transition-transform hover:-translate-y-0.5 active:translate-y-1 sm:text-lg",
+        pulse && "animate-cta-pulse motion-reduce:animate-none",
+        tone === "muted"
+          ? "border-navy/30 bg-transparent py-3.5 text-sm text-navy/60 hover:text-navy sm:text-base"
+          : "border-navy shadow-[0_6px_0_0_var(--navy)] active:shadow-[0_2px_0_0_var(--navy)]",
+        tone === "yellow" && "bg-poke-yellow text-navy",
+        tone === "red" && "bg-poke-red text-surface",
       )}
     >
       {children}
