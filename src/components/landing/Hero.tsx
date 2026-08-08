@@ -1,5 +1,6 @@
 import heroCity from "@/assets/image-2.png.asset.json";
 import phone from "@/assets/image-4.png.asset.json";
+import logo from "@/assets/logo.png.asset.json";
 import { Cta, Seals } from "./ui";
 import { ball } from "./data";
 
@@ -10,10 +11,14 @@ export function Hero() {
         ● Oferta válida hoje ● Acesso imediato após a compra
       </div>
 
-      <div className="mx-auto w-full max-w-5xl px-5 pt-10 pb-16 text-center sm:pt-16 sm:pb-24">
-        <p className="inline-block -rotate-1 rounded-full border-2 border-navy bg-surface px-4 py-1.5 font-display text-xs text-navy uppercase">
-          Pokémon 3D Remastered 2026
-        </p>
+      <div className="mx-auto w-full max-w-5xl px-5 pt-8 pb-16 text-center sm:pt-12 sm:pb-24">
+        <img
+          src={logo.url}
+          alt="Pokémon Remastered 2026"
+          className="mx-auto w-56 drop-shadow-[0_4px_0_var(--aqua-deep)] sm:w-72"
+          width={320}
+          height={160}
+        />
 
         <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase drop-shadow-[0_4px_0_var(--aqua-deep)] sm:text-6xl">
           Reviva Pokémon Red, Blue e Yellow em{" "}
