@@ -15,17 +15,24 @@ function CheckoutButton({
   href,
   children,
   tone,
+  pulse = true,
 }: {
   href: string;
   children: React.ReactNode;
-  tone: "yellow" | "red";
+  tone: "yellow" | "red" | "muted";
+  pulse?: boolean;
 }) {
   return (
     <a
       href={href}
       className={cn(
-        "block w-full rounded-full border-2 border-navy px-6 py-5 text-center font-display text-base uppercase shadow-[0_6px_0_0_var(--navy)] transition-transform hover:-translate-y-0.5 active:translate-y-1 active:shadow-[0_2px_0_0_var(--navy)] sm:text-lg",
-        tone === "yellow" ? "bg-poke-yellow text-navy" : "bg-poke-red text-surface",
+        "block w-full rounded-full border-2 px-6 py-5 text-center font-display text-base uppercase transition-transform hover:-translate-y-0.5 active:translate-y-1 sm:text-lg",
+        pulse && "animate-cta-pulse motion-reduce:animate-none",
+        tone === "muted"
+          ? "border-navy/30 bg-transparent py-3.5 text-sm text-navy/60 hover:text-navy sm:text-base"
+          : "border-navy shadow-[0_6px_0_0_var(--navy)] active:shadow-[0_2px_0_0_var(--navy)]",
+        tone === "yellow" && "bg-poke-yellow text-navy",
+        tone === "red" && "bg-poke-red text-surface",
       )}
     >
       {children}
@@ -48,25 +55,25 @@ export function Oferta() {
 
       <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.25fr] lg:items-start lg:gap-8">
         {/* Básico */}
-        <div className="order-2 rounded-3xl border-2 border-navy bg-surface p-6 opacity-95 shadow-[0_6px_0_0_var(--navy)] lg:order-1 lg:mt-8">
-          <h3 className="font-display text-xl text-navy uppercase">Plano Básico</h3>
-          <p className="mt-1 text-sm font-semibold text-body">Pokémon 3D Remastered</p>
-          <ul className="mt-6 grid gap-3">
+        <div className="order-2 rounded-3xl border border-navy/20 bg-surface/60 p-5 opacity-70 grayscale-[0.35] transition-opacity hover:opacity-100 hover:grayscale-0 lg:order-1 lg:mt-14 lg:scale-95">
+          <h3 className="font-display text-base text-navy/70 uppercase">Plano Básico</h3>
+          <p className="mt-1 text-xs font-semibold text-body/70">Pokémon 3D Remastered</p>
+          <ul className="mt-4 grid gap-2 text-sm opacity-80">
             {base.map((i) => (
               <Check key={i}>{i}</Check>
             ))}
-            <li className="flex items-start gap-3 text-body">
-              <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-poke-red text-[11px] font-black text-surface">
+            <li className="flex items-start gap-3 text-body/70">
+              <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-navy/25 text-[11px] font-black text-surface">
                 ✕
               </span>
-              <span className="text-[15px]">Sem Atualizações</span>
+              <span className="text-[14px]">Sem Atualizações</span>
             </li>
           </ul>
-          <div className="mt-6">
+          <div className="mt-5 opacity-80">
             <Price from="R$ 97" to="R$ 17,90" />
           </div>
-          <div className="mt-5">
-            <CheckoutButton href={CHECKOUT_BASICO} tone="red">
+          <div className="mt-4">
+            <CheckoutButton href={CHECKOUT_BASICO} tone="muted" pulse={false}>
               Quero o plano básico
             </CheckoutButton>
           </div>
