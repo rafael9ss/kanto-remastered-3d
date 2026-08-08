@@ -13,16 +13,17 @@ Página única de vendas em português, mobile-first, com todas as seções na o
 
 ## Imagens
 
-Uso dos assets públicos do site de referência (sprites e artes oficiais PokeAPI já usadas lá) para artes de Pokémon, ícones de pokébola e GIFs animados. Geração de imagem apenas onde nada existe:
+Prioridade para as imagens reais do produto que você anexou (screenshots do Pokémon 1ª geração em 3D), publicadas como assets no CDN e usadas assim:
 
-- Hero: mockup do produto (celular + notebook com Kanto em 3D) — gerado.
-- O que você recebe: composição das 3 caixas Red/Blue/Yellow em 3D + telas — gerado (1 imagem) + artes oficiais Charizard/Blastoise/Pikachu do referência.
-- Nostalgia: cena de Kanto em 3D — gerada.
-- Prova social: cards estilizados de comentário (Reddit/fórum) montados em HTML, com avatar por sprite do referência (sem gerar print falso).
-- Bônus: 5 cards com arte oficial de cada região/jogo vinda do referência + 1 mockup do pacote gerado.
-- Garantia: selo 14 dias — gerado (PNG transparente).
+- Hero: screenshot da cidade em 3D com pôr do sol (image-2) como fundo cinematográfico + o celular na mão jogando (image-4) como destaque do produto; bloco 16:9 reservado para a VSL.
+- O que você recebe: grade com as telas 3D (image, image-3, image-7) e a foto no PC/monitor (image-5), mostrando celular e PC.
+- Reviva o Pokémon da sua infância: comparativo 1996 vs 2026 (image-6) em destaque + cena de Kanto em 3D.
+- Prova social: cards de comentário montados em HTML (visual de Reddit/fórum), com artes oficiais do site de referência como avatar — sem inventar print falso.
+- Bônus: 5 cards usando as artes oficiais de Pokémon (PokeAPI) já utilizadas no site de referência para identificar cada bônus/região.
+- Garantia: selo de 14 dias — único item realmente gerado (PNG transparente).
 
-Espaço reservado (placeholder) para a VSL no Hero: bloco 16:9 pronto para receber o vídeo depois.
+Sprites, ícones de pokébola e artes oficiais vêm dos mesmos assets públicos do site de referência; nada mais é gerado sem necessidade.
+
 
 ## Seções (ordem exata)
 
