@@ -43,7 +43,7 @@ export function SalesNotifications() {
 
   if (closed) return null;
 
-  const c = compras[index];
+  const c = compras[index] ?? compras[0]!;
 
   return (
     <div
