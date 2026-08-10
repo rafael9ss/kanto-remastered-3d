@@ -113,7 +113,7 @@ export function Seals({ light = false }: { light?: boolean }) {
       {[
         { i: "🔒", t: "Compra 100% segura" },
         { i: "🛡️", t: "Garantia de 14 dias" },
-        { i: "📱", t: "Android · iOS · PC" },
+        { i: "📱", t: "Android · PC" },
       ].map((s) => (
         <li
           key={s.t}

@@ -12,7 +12,7 @@ import { SalesNotifications } from "@/components/landing/SalesNotifications";
 
 const title = "Pokémon 3D Remastered 2026 — Red, Blue e Yellow em 3D";
 const description =
-  "Reviva Pokémon Red, Blue e Yellow com visual remasterizado em 3D no Android, iOS e PC. Instalação em minutos, 5 bônus e garantia de 14 dias.";
+  "Reviva Pokémon Red, Blue e Yellow com visual remasterizado em 3D no Android e PC. Instalação em minutos, 5 bônus e garantia de 14 dias.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
