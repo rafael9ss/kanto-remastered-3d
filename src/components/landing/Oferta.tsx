@@ -7,7 +7,7 @@ const base = [
   "Pokémon Blue Remastered 3D",
   "Pokémon Yellow Remastered 3D",
   "Mod 3D aplicado aos 3 jogos",
-  "Versões para Android, iOS e PC",
+  "Versões para Android e PC",
   "Tutorial rápido de instalação",
 ];
 
@@ -48,7 +48,7 @@ export function Oferta() {
         <Title onAqua={false}>Escolha seu acesso ao Pokémon 3D Remastered</Title>
         <div className="mt-5 space-y-1 text-[15px] font-semibold text-body">
           <p>Acesso digital após a compra.</p>
-          <p>Versões para Android, iOS e PC.</p>
+          <p>Versões para Android e PC.</p>
           <p>Garantia incondicional de 14 dias.</p>
         </div>
       </div>

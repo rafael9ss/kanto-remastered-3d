@@ -27,7 +27,7 @@ export function Hero() {
           <span className="inline-block rounded-xl border-2 border-navy bg-poke-yellow px-3 text-navy drop-shadow-none">
             3D
           </span>{" "}
-          — Agora no Android, iOS e PC
+          — Agora no Android e PC
         </h1>
 
         <p className="mx-auto mt-5 max-w-2xl rounded-full border-2 border-poke-yellow bg-surface px-5 py-3 text-sm font-bold text-poke-blue sm:text-base">
@@ -67,7 +67,6 @@ export function Hero() {
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           {[
             { l: "Android", i: ball.poke },
-            { l: "iOS", i: ball.great },
             { l: "PC", i: ball.ultra },
           ].map((b) => (
             <span

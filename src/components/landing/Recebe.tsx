@@ -44,7 +44,7 @@ export function Recebe() {
       <Card className="mt-8 p-6">
         <ul className="grid gap-4 sm:grid-cols-2">
           <Check>Mod 3D já aplicado aos jogos.</Check>
-          <Check>Versões para Android, iOS e PC.</Check>
+          <Check>Versões para Android e PC.</Check>
           <Check>Tutorial rápido para instalar e começar a jogar em minutos.</Check>
           <Check>Atualizações constantes para deixar a experiência cada vez melhor.</Check>
         </ul>

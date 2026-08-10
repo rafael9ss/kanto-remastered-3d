@@ -75,7 +75,7 @@ export const faq = [
   },
   {
     q: "Funciona no celular?",
-    a: "Sim. Há versões para Android e iOS, além da versão para PC.",
+    a: "Sim. Há versões para Android e PC.",
   },
   {
     q: "Preciso entender de emulador ou configuração?",
