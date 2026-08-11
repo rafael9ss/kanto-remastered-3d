@@ -22,6 +22,8 @@ export function Bonus() {
               className="size-16 shrink-0"
               width={64}
               height={64}
+              decoding="async"
+              sizes="64px"
             />
             <div>
               <h3 className="font-display text-sm leading-tight text-navy uppercase">{b.titulo}</h3>

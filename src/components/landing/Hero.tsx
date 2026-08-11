@@ -6,7 +6,7 @@ import { ball } from "./data";
 
 export function Hero() {
   return (
-    <header className="bg-kanto">
+    <header className="hero-shell bg-kanto">
       <div className="bg-poke-red px-4 py-2.5 text-center text-[11px] font-black tracking-[0.12em] text-surface uppercase sm:text-xs">
         ● Oferta válida hoje ● Acesso imediato após a compra
       </div>
@@ -18,6 +18,10 @@ export function Hero() {
           className="mx-auto w-56 drop-shadow-[0_4px_0_var(--aqua-deep)] sm:w-72"
           width={320}
           height={160}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          sizes="(max-width: 640px) 224px, 288px"
         />
 
         <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase drop-shadow-[0_4px_0_var(--aqua-deep)] sm:text-6xl">
@@ -43,6 +47,10 @@ export function Hero() {
             className="size-full object-cover opacity-80"
             width={1500}
             height={600}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            sizes="(max-width: 640px) calc(100vw - 40px), 768px"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
             <span className="flex size-16 items-center justify-center rounded-full border-2 border-navy bg-poke-red text-2xl text-surface">
@@ -58,10 +66,13 @@ export function Hero() {
           className="mx-auto mt-8 w-52 rounded-3xl border-4 border-navy sm:w-64"
           width={333}
           height={592}
+          loading="lazy"
+          decoding="async"
+          sizes="(max-width: 640px) 208px, 256px"
         />
 
         <div className="mx-auto mt-8 max-w-xl">
-          <Cta>Quero reviver Pokémon em 3D</Cta>
+          <Cta className="hero-cta">Quero reviver Pokémon em 3D</Cta>
         </div>
 
         <div className="mt-6 flex flex-wrap justify-center gap-2">
@@ -73,7 +84,7 @@ export function Hero() {
               key={b.l}
               className="flex items-center gap-2 rounded-full border-2 border-navy bg-surface px-4 py-2 text-xs font-black text-navy uppercase"
             >
-              <img src={b.i} alt="" className="size-4" width={16} height={16} /> {b.l}
+              <img src={b.i} alt="" className="size-4" width={16} height={16} loading="lazy" decoding="async" /> {b.l}
             </span>
           ))}
         </div>

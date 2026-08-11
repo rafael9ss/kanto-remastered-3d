@@ -28,6 +28,8 @@ export function Recebe() {
             className="aspect-square w-full rounded-2xl border-2 border-navy object-cover"
             width={600}
             height={600}
+            decoding="async"
+            sizes="(max-width: 640px) calc((100vw - 52px) / 2), 240px"
           />
         ))}
       </div>
@@ -35,7 +37,7 @@ export function Recebe() {
       <div className="mt-8 grid gap-3 sm:grid-cols-3">
         {jogos.map((j) => (
           <Card key={j.nome} className="flex items-center gap-3">
-            <img src={j.art} alt="" loading="lazy" className="size-14" width={56} height={56} />
+            <img src={j.art} alt="" loading="lazy" className="size-14" width={56} height={56} decoding="async" sizes="56px" />
             <p className="font-display text-sm leading-tight text-navy uppercase">{j.nome}</p>
           </Card>
         ))}

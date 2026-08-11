@@ -18,6 +18,8 @@ export function Nostalgia() {
           className="w-full rounded-3xl border-4 border-navy object-cover"
           width={480}
           height={640}
+          decoding="async"
+          sizes="(max-width: 640px) calc(100vw - 40px), 480px"
         />
         <img
           src={kanto.url}
@@ -26,6 +28,8 @@ export function Nostalgia() {
           className="w-full rounded-3xl border-4 border-navy object-cover"
           width={640}
           height={640}
+          decoding="async"
+          sizes="(max-width: 640px) calc(100vw - 40px), 640px"
         />
       </div>
 

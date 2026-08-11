@@ -12,6 +12,8 @@ export function Garantia() {
           width={1024}
           height={1024}
           className="mx-auto w-40 sm:w-full"
+          decoding="async"
+          sizes="(max-width: 640px) 160px, 220px"
         />
         <div>
           <Title onAqua={false}>Garantia Incondicional de 14 Dias</Title>

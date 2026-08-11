@@ -167,6 +167,17 @@
   }
 }
 
+/* Mantém a prévia e a versão publicada livres do selo da plataforma. */
+#lovable-badge-cta {
+  display: none !important;
+}
+
+/* O navegador adia layout e pintura das seções fora da viewport inicial. */
+.landing-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
 @utility bg-kanto {
   background-color: var(--aqua);
   background-image:

@@ -40,7 +40,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "px-5 py-16 sm:py-24",
+        "landing-section px-5 py-16 sm:py-24",
         variant === "aqua" ? "bg-kanto" : "bg-surface-2",
         className,
       )}

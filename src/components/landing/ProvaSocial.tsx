@@ -45,6 +45,8 @@ export function ProvaSocial() {
                 className="w-full object-contain"
                 width={640}
                 height={640}
+                decoding="async"
+                sizes="(max-width: 640px) calc(100vw - 56px), 320px"
               />
             </div>
             <figcaption className="mt-2 text-center text-xs font-black uppercase tracking-wide text-navy/70">
