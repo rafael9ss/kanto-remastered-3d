@@ -18,6 +18,17 @@ const criticalCss = `
   .hero-cta { min-height: 56px; }
 `;
 
+const removeLovableBadge = `
+  (() => {
+    const selector = '#lovable-badge';
+    const removeBadge = () => document.querySelector(selector)?.remove();
+    removeBadge();
+    const observer = new MutationObserver(removeBadge);
+    observer.observe(document.documentElement, { childList: true, subtree: true });
+    window.setTimeout(() => observer.disconnect(), 10000);
+  })();
+`;
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -109,6 +120,7 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pt-BR">
       <head>
         <style>{criticalCss}</style>
+        <script dangerouslySetInnerHTML={{ __html: removeLovableBadge }} />
         <HeadContent />
       </head>
       <body>
