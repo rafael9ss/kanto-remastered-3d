@@ -1,8 +1,8 @@
-import heroCity from "@/assets/image-2.png.asset.json";
 import phone from "@/assets/image-4.png.asset.json";
 import logo from "@/assets/logo.png.asset.json";
 import { Cta, Seals } from "./ui";
 import { ball } from "./data";
+import { HeroVideo } from "./HeroVideo";
 
 export function Hero() {
   return (
@@ -39,26 +39,7 @@ export function Hero() {
           voltar para Kanto em minutos.
         </p>
 
-        {/* Espaço reservado para a VSL */}
-        <div className="relative mx-auto mt-8 aspect-video w-full max-w-3xl overflow-hidden rounded-3xl border-4 border-navy bg-navy shadow-[0_10px_0_0_rgba(0,0,0,0.25)]">
-          <img
-            src={heroCity.url}
-            alt="Prévia do Pokémon Red, Blue e Yellow remasterizados em 3D"
-            className="size-full object-cover opacity-80"
-            width={1500}
-            height={600}
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-            sizes="(max-width: 640px) calc(100vw - 40px), 768px"
-          />
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-            <span className="flex size-16 items-center justify-center rounded-full border-2 border-navy bg-poke-red text-2xl text-surface">
-              ▶
-            </span>
-            <span className="font-display text-xs text-surface uppercase">Assista ao vídeo</span>
-          </div>
-        </div>
+        <HeroVideo />
 
         <img
           src={phone.url}
