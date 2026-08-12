@@ -103,6 +103,9 @@ export function HeroVideo() {
             onReady: ({ target }) => {
               if (disposed) return;
               playerRef.current = target;
+              mountRef.current
+                ?.querySelector("iframe")
+                ?.setAttribute("title", "Vídeo promocional do Pokémon 3D Remastered");
               target.mute();
               target.setVolume(0);
               target.playVideo();
