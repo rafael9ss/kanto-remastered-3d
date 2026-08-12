@@ -1,5 +1,4 @@
 import { useEffect, useId, useRef, useState } from "react";
-import heroPoster from "@/assets/image-2.png.asset.json";
 
 const YOUTUBE_VIDEO_ID = "h25glbS2aq4";
 const YOUTUBE_API_ID = "youtube-iframe-api";
@@ -72,6 +71,7 @@ function loadYouTubeApi() {
 }
 
 export function HeroVideo() {
+  const frameRef = useRef<HTMLDivElement>(null);
   const mountRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YouTubePlayer | null>(null);
   const playerId = `youtube-hero-${useId().replace(/[^a-z0-9]/gi, "")}`;
@@ -103,7 +103,7 @@ export function HeroVideo() {
             onReady: ({ target }) => {
               if (disposed) return;
               playerRef.current = target;
-              mountRef.current
+              frameRef.current
                 ?.querySelector("iframe")
                 ?.setAttribute("title", "Vídeo promocional do Pokémon 3D Remastered");
               target.mute();
@@ -139,40 +139,53 @@ export function HeroVideo() {
   };
 
   return (
-    <div className="relative mx-auto mt-8 aspect-[9/16] w-full max-w-[22rem] overflow-hidden rounded-3xl border-4 border-navy bg-navy shadow-[0_10px_0_0_rgba(0,0,0,0.25)] sm:max-w-[25rem]">
-      <img
-        src={heroPoster.url}
-        alt="Prévia do Pokémon Red, Blue e Yellow remasterizados em 3D"
-        className="absolute inset-0 size-full object-cover opacity-60"
-        width={1500}
-        height={600}
-        loading="eager"
-        fetchPriority="high"
-        decoding="async"
-        sizes="(max-width: 640px) calc(100vw - 40px), 400px"
-      />
+    <div className="relative mx-auto mt-8 mb-6 w-full max-w-[380px] overflow-hidden rounded-2xl border-[3px] border-[#1a1a1a] bg-[#1a1a1a] p-1.5 shadow-2xl">
+      <div className="relative w-full overflow-hidden rounded-xl border-[1.5px] border-[#2a2a2a] bg-black">
+        <div ref={frameRef} className="youtube-hero-player relative aspect-[3/4] overflow-hidden">
+          {!failed ? <div id={playerId} ref={mountRef} /> : null}
 
-      {!failed ? <div id={playerId} ref={mountRef} className="youtube-hero-player absolute inset-0" /> : null}
+          {!failed ? <div className="absolute inset-0 z-20 cursor-pointer bg-transparent" aria-hidden="true" /> : null}
 
-      {!soundEnabled && !failed ? (
-        <div className="absolute inset-0 flex items-center justify-center bg-navy/20 p-5">
-          <button
-            type="button"
-            onClick={enableSound}
-            disabled={!isReady}
-            aria-label="Ativar o som do vídeo"
-            className="rounded-full border-2 border-navy bg-poke-yellow px-5 py-3 font-display text-xs tracking-wide text-navy uppercase shadow-[0_5px_0_0_var(--navy)] transition-transform hover:-translate-y-0.5 focus-visible:ring-4 focus-visible:ring-surface focus-visible:outline-none disabled:cursor-wait disabled:opacity-80 sm:text-sm"
-          >
-            {isReady ? "Ativar som" : "Carregando vídeo..."}
-          </button>
+          {!soundEnabled && !failed ? (
+            <div className="absolute inset-0 z-40 flex items-center justify-center bg-black/20 backdrop-blur-[2px]">
+              <button
+                type="button"
+                onClick={enableSound}
+                disabled={!isReady}
+                aria-label="Ativar o som do vídeo"
+                className="sound-prompt flex flex-col items-center gap-2 rounded-[15px] border-2 border-white/20 bg-[#ef4444] p-6 text-white transition-transform hover:scale-[1.03] focus-visible:ring-4 focus-visible:ring-white/70 focus-visible:outline-none disabled:cursor-wait disabled:opacity-90"
+              >
+                <span className="font-display text-xs font-black tracking-widest uppercase">Clique aqui</span>
+                <span className="rounded-full bg-white/20 p-3" aria-hidden="true">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M11 5 6 9H2v6h4l5 4V5Z" />
+                    <path d="m23 9-6 6M17 9l6 6" />
+                  </svg>
+                </span>
+                <span className="font-display text-[10px] font-black tracking-tight uppercase">
+                  Para ativar o som
+                </span>
+              </button>
+            </div>
+          ) : null}
+
+          {failed ? (
+            <p className="absolute inset-0 flex items-center justify-center bg-black px-6 text-center text-xs font-bold text-white">
+              O vídeo não pôde ser carregado agora.
+            </p>
+          ) : null}
         </div>
-      ) : null}
-
-      {failed ? (
-        <p className="absolute inset-x-5 bottom-5 rounded-2xl bg-navy/85 px-4 py-3 text-center text-xs font-bold text-surface">
-          O vídeo não pôde ser carregado agora.
-        </p>
-      ) : null}
+      </div>
     </div>
   );
 }

@@ -184,6 +184,28 @@
   width: 100% !important;
   height: 100% !important;
   border: 0;
+  transform: scale(1.15);
+  transform-origin: center;
+}
+
+@keyframes sound-prompt-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgb(239 68 68 / 45%);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgb(239 68 68 / 0%);
+  }
+}
+
+.sound-prompt {
+  animation: sound-prompt-pulse 1.7s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sound-prompt {
+    animation: none;
+  }
 }
 
 @utility bg-kanto {
