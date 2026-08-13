@@ -30,7 +30,8 @@ function CheckoutButton({
         pulse && "animate-cta-pulse motion-reduce:animate-none",
         tone === "muted"
           ? "border-navy/30 bg-transparent py-3.5 text-sm text-navy/60 hover:text-navy sm:text-base"
-          : "border-navy shadow-[0_6px_0_0_var(--navy)] active:shadow-[0_2px_0_0_var(--navy)]",
+          : "cta-shine border-navy shadow-[0_6px_0_0_var(--navy)] active:shadow-[0_2px_0_0_var(--navy)]",
+
         tone === "yellow" && "bg-poke-yellow text-navy",
         tone === "red" && "bg-poke-red text-surface",
         tone === "green" && "bg-poke-green text-surface",
