@@ -115,9 +115,11 @@ export function Oferta() {
               ))}
             </ul>
 
-            <p className="mt-6 rounded-2xl border-2 border-navy bg-poke-red px-4 py-3 text-center font-display text-base text-surface uppercase sm:text-lg">
-              R$ 255 em bônus incluídos
+            <p className="mt-6 flex flex-wrap items-baseline justify-center gap-x-2 gap-y-1 border-y-2 border-dashed border-navy/30 py-4 text-center font-display text-base uppercase text-navy sm:text-lg">
+              <span className="text-poke-red text-2xl sm:text-3xl">R$ 255</span>
+              <span>em bônus incluídos</span>
             </p>
+
 
             <div className="mt-4">
               <Price from="R$ 197" to="R$ 29,90" />
