@@ -226,14 +226,20 @@
 @keyframes cta-pulse {
   0%,
   100% {
-    transform: scale(1);
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
   }
   50% {
-    transform: scale(1.035);
+    -webkit-transform: scale3d(1.035, 1.035, 1);
+    transform: scale3d(1.035, 1.035, 1);
   }
 }
 
 @utility animate-cta-pulse {
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation: cta-pulse 1.6s ease-in-out infinite;
   animation: cta-pulse 1.6s ease-in-out infinite;
 }
 
