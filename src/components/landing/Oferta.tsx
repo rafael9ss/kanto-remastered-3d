@@ -125,7 +125,7 @@ export function Oferta() {
             <p className="mt-2 text-center text-sm font-semibold text-body">Pagamento único.</p>
 
             <div className="mt-5">
-              <CheckoutButton href={CHECKOUT_PREMIUM} tone="yellow">
+              <CheckoutButton href={CHECKOUT_PREMIUM} tone="green">
                 Quero o plano premium
               </CheckoutButton>
             </div>
