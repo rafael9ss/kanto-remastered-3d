@@ -47,6 +47,10 @@ export function Hero() {
 
         <HeroVideo />
 
+        <div className="mx-auto mt-8 max-w-xl">
+          <Cta className="hero-cta">Quero reviver Pokémon em 3D</Cta>
+        </div>
+
         <img
           src={phoneSmall}
           srcSet={`${phoneSmall} 208w, ${phoneLarge} 416w`}
@@ -59,9 +63,6 @@ export function Hero() {
           sizes="(max-width: 640px) 208px, 256px"
         />
 
-        <div className="mx-auto mt-8 max-w-xl">
-          <Cta className="hero-cta">Quero reviver Pokémon em 3D</Cta>
-        </div>
 
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           {deviceBadges.map((badge) => (
