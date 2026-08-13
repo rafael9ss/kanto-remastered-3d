@@ -25,6 +25,7 @@ function CheckoutButton({
   return (
     <a
       href={href}
+      suppressHydrationWarning
       className={cn(
         "block w-full rounded-full border-2 px-6 py-5 text-center font-display text-base uppercase transition-transform hover:-translate-y-0.5 active:translate-y-1 sm:text-lg",
         pulse && "animate-cta-pulse motion-reduce:animate-none",
