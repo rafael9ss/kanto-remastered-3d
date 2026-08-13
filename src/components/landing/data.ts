@@ -1,16 +1,16 @@
 export const CHECKOUT_BASICO = "https://go.perfectpay.com.br/PPU38CQF8CB";
 export const CHECKOUT_PREMIUM = "https://go.perfectpay.com.br/PPU38CQF6N2";
 
-import art6 from "@/assets/media/poke/6.png";
-import art9 from "@/assets/media/poke/9.png";
-import art25 from "@/assets/media/poke/25.png";
-import art150 from "@/assets/media/poke/150.png";
-import art249 from "@/assets/media/poke/249.png";
-import art448 from "@/assets/media/poke/448.png";
-import art487 from "@/assets/media/poke/487.png";
-import pokeBall from "@/assets/media/poke/poke-ball.png";
-import greatBall from "@/assets/media/poke/great-ball.png";
-import ultraBall from "@/assets/media/poke/ultra-ball.png";
+import art6 from "@/assets/media/poke/6.webp";
+import art9 from "@/assets/media/poke/9.webp";
+import art25 from "@/assets/media/poke/25.webp";
+import art150 from "@/assets/media/poke/150.webp";
+import art249 from "@/assets/media/poke/249.webp";
+import art448 from "@/assets/media/poke/448.webp";
+import art487 from "@/assets/media/poke/487.webp";
+import pokeBall from "@/assets/media/poke/poke-ball.webp";
+import greatBall from "@/assets/media/poke/great-ball.webp";
+import ultraBall from "@/assets/media/poke/ultra-ball.webp";
 
 export const ball = {
   poke: pokeBall,

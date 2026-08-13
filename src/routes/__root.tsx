@@ -11,6 +11,18 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
+const FONT_CSS =
+  "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600;700;800&display=swap";
+
+const loadFonts = `(() => {
+  const l = document.createElement('link');
+  l.rel = 'stylesheet';
+  l.href = ${JSON.stringify("__FONT__")};
+  l.media = 'print';
+  l.onload = () => { l.media = 'all'; };
+  document.head.appendChild(l);
+})();`.replace('__FONT__', FONT_CSS);
+
 const criticalCss = `
   :root { background: #e9f9ff; color: #1d3352; }
   body { margin: 0; background: #e9f9ff; font-family: Barlow, system-ui, sans-serif; }
@@ -113,8 +125,9 @@ export const Route = createRootRoute({
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600;700;800&display=swap",
+        rel: "preload",
+        as: "style",
+        href: FONT_CSS,
       },
       { rel: "preconnect", href: "https://cdn.utmify.com.br", crossOrigin: "anonymous" },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
@@ -132,6 +145,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <style>{criticalCss}</style>
         <script dangerouslySetInnerHTML={{ __html: removeLovableBadge }} />
+        <script dangerouslySetInnerHTML={{ __html: loadFonts }} />
         <script dangerouslySetInnerHTML={{ __html: deferredTracking }} />
         <HeadContent />
       </head>

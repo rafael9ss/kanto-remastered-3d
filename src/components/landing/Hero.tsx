@@ -1,4 +1,4 @@
-import logoSmall from "@/assets/media/logo-288.png";
+import logoSmall from "@/assets/media/logo-288.webp";
 import phoneSmall from "@/assets/media/phone-208.webp";
 import phoneLarge from "@/assets/media/phone-416.webp";
 import { Cta, Seals } from "./ui";
