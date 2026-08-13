@@ -1,11 +1,14 @@
+import logoSmall from "@/assets/media/logo-288.png";
+import logoLarge from "@/assets/media/logo-576.png";
 import phoneSmall from "@/assets/media/phone-208.webp";
 import phoneLarge from "@/assets/media/phone-416.webp";
 import { Cta, Seals } from "./ui";
 import { HeroVideo } from "./HeroVideo";
+import { ball } from "./data";
 
 const deviceBadges = [
-  { label: "Android", icon: "●" },
-  { label: "PC", icon: "◆" },
+  { label: "Android", icon: ball.poke },
+  { label: "PC", icon: ball.ultra },
 ];
 
 export function Hero() {
@@ -16,9 +19,18 @@ export function Hero() {
       </div>
 
       <div className="mx-auto w-full max-w-5xl px-5 pt-8 pb-16 text-center sm:pt-12 sm:pb-24">
-        <div className="mx-auto inline-flex items-center gap-2 rounded-full border-2 border-navy bg-poke-yellow px-5 py-2 font-display text-sm tracking-wide text-navy uppercase shadow-[0_4px_0_var(--navy)] sm:text-base">
-          <span aria-hidden="true">◉</span> Pokémon Remastered 2026
-        </div>
+        <img
+          src={logoSmall}
+          srcSet={`${logoSmall} 288w, ${logoLarge} 576w`}
+          alt="Pokémon Remastered 2026"
+          className="mx-auto w-56 drop-shadow-[0_4px_0_var(--aqua-deep)] sm:w-72"
+          width={288}
+          height={157}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          sizes="(max-width: 640px) 224px, 288px"
+        />
 
         <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase drop-shadow-[0_4px_0_var(--aqua-deep)] sm:text-6xl">
           Reviva Pokémon <span className="text-poke-red">Red</span>,{" "}
@@ -59,7 +71,16 @@ export function Hero() {
               key={badge.label}
               className="flex items-center gap-2 rounded-full border-2 border-navy bg-surface px-4 py-2 text-xs font-black text-navy uppercase"
             >
-              <span className="text-poke-red" aria-hidden="true">{badge.icon}</span> {badge.label}
+              <img
+                src={badge.icon}
+                alt=""
+                className="size-4"
+                width={16}
+                height={16}
+                loading="eager"
+                decoding="async"
+              />{" "}
+              {badge.label}
             </span>
           ))}
         </div>
@@ -76,4 +97,3 @@ export function Hero() {
     </header>
   );
 }
-

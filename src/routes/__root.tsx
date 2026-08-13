@@ -110,6 +110,12 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: appCss,
       },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600;700;800&display=swap",
+      },
       { rel: "preconnect", href: "https://cdn.utmify.com.br", crossOrigin: "anonymous" },
       { rel: "icon", href: "/favicon.png", type: "image/png" },
     ],
@@ -141,4 +147,3 @@ function RootComponent() {
   /* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */
   return <Outlet />;
 }
-

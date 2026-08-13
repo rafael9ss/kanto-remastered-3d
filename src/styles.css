@@ -19,8 +19,8 @@
  */
 
 @theme inline {
-  --font-display: Impact, "Arial Black", system-ui, sans-serif;
-  --font-sans: Arial, Helvetica, system-ui, sans-serif;
+  --font-display: "Archivo Black", system-ui, sans-serif;
+  --font-sans: "Barlow", system-ui, sans-serif;
   --color-poke-red: var(--poke-red);
   --color-poke-blue: var(--poke-blue);
   --color-poke-yellow: var(--poke-yellow);
@@ -173,11 +173,6 @@
 }
 
 /* O navegador adia layout e pintura das seções fora da viewport inicial. */
-.landing-section {
-  content-visibility: auto;
-  contain-intrinsic-size: auto 900px;
-}
-
 .youtube-hero-player iframe {
   position: absolute !important;
   inset: 0;
@@ -239,4 +234,3 @@
 @utility animate-cta-pulse {
   animation: cta-pulse 1.6s ease-in-out infinite;
 }
-
