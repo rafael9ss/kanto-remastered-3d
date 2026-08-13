@@ -75,7 +75,7 @@ export function Oferta() {
             <Price from="R$ 97" to="R$ 19,90" />
           </div>
           <div className="mt-4">
-            <CheckoutButton href={CHECKOUT_BASICO} tone="muted" pulse={false}>
+            <CheckoutButton href={CHECKOUT_BASICO} tone="green" pulse={false}>
               Quero o plano básico
             </CheckoutButton>
           </div>
