@@ -20,9 +20,9 @@ export const ball = {
 
 
 export const jogos = [
-  { nome: "Pokémon Red Remastered 3D", art: artwork(6), cor: "poke-red" as const },
-  { nome: "Pokémon Blue Remastered 3D", art: artwork(9), cor: "poke-blue" as const },
-  { nome: "Pokémon Yellow Remastered 3D", art: artwork(25), cor: "poke-yellow" as const },
+  { nome: "Pokémon Red Remastered 3D", art: art6, cor: "poke-red" as const },
+  { nome: "Pokémon Blue Remastered 3D", art: art9, cor: "poke-blue" as const },
+  { nome: "Pokémon Yellow Remastered 3D", art: art25, cor: "poke-yellow" as const },
 ];
 
 export const bonus = [
@@ -30,31 +30,31 @@ export const bonus = [
     titulo: "Bônus 1 — 14 Jogos Clássicos Pokémon",
     desc: "Red, Blue, Yellow, Gold, Silver, Crystal, Ruby, Sapphire, Emerald, FireRed, LeafGreen, Diamond, Pearl e Platinum.",
     valor: "R$ 97",
-    art: artwork(150),
+    art: art150,
   },
   {
     titulo: "Bônus 2 — Kanto, Johto, Hoenn e Sinnoh",
     desc: "Reviva as quatro regiões clássicas que marcaram gerações.",
     valor: "R$ 47",
-    art: artwork(249),
+    art: art249,
   },
   {
     titulo: "Bônus 3 — Trocas e Batalhas Online com Amigos",
     desc: "Leve a experiência além da campanha e jogue com outros treinadores.",
     valor: "R$ 47",
-    art: artwork(448),
+    art: art448,
   },
   {
     titulo: "Bônus 4 — Emulador Otimizado para Celular",
     desc: "Tudo preparado para facilitar sua experiência no smartphone.",
     valor: "R$ 37",
-    art: artwork(25),
+    art: art25,
   },
   {
     titulo: "Bônus 5 — Guia de Instalação Passo a Passo",
     desc: "Siga as instruções e comece a jogar sem complicação.",
     valor: "R$ 27",
-    art: artwork(487),
+    art: art487,
   },
 ];
 
