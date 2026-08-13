@@ -1,5 +1,4 @@
 import logoSmall from "@/assets/media/logo-288.png";
-import logoLarge from "@/assets/media/logo-576.png";
 import phoneSmall from "@/assets/media/phone-208.webp";
 import phoneLarge from "@/assets/media/phone-416.webp";
 import { Cta, Seals } from "./ui";
@@ -21,7 +20,6 @@ export function Hero() {
       <div className="mx-auto w-full max-w-5xl px-5 pt-8 pb-16 text-center sm:pt-12 sm:pb-24">
         <img
           src={logoSmall}
-          srcSet={`${logoSmall} 288w, ${logoLarge} 576w`}
           alt="Pokémon Remastered 2026"
           className="mx-auto w-56 drop-shadow-[0_4px_0_var(--aqua-deep)] sm:w-72"
           width={288}
