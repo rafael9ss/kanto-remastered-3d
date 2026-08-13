@@ -1,4 +1,5 @@
-import seal from "@/assets/media/guarantee-220.png";
+import seal from "@/assets/media/guarantee-220.webp";
+import sealLarge from "@/assets/media/guarantee-440.webp";
 import { Section, Title, Card } from "./ui";
 
 export function Garantia() {
