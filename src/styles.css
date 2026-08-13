@@ -31,6 +31,8 @@
   --color-body: var(--body);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
+  --color-cream: var(--cream);
+
 
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -86,6 +88,8 @@
   --body: oklch(0.45 0.04 250);
   --surface: oklch(1 0 0);
   --surface-2: oklch(0.97 0.015 220);
+  --cream: oklch(0.975 0.028 95);
+
 
 
   --radius: 0.625rem;

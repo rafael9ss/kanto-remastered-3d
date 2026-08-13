@@ -92,15 +92,29 @@ export function Check({ children }: { children: React.ReactNode }) {
 }
 
 export function Price({ from, to }: { from: string; to: string }) {
+  const [reais, centavos] = to.replace(/^R\$\s*/, "").split(",");
   return (
-    <div className="rounded-3xl border-2 border-navy bg-poke-yellow p-5 text-center">
-      <p className="text-sm font-semibold text-navy/80">
-        De <span className="line-through">{from}</span> por apenas
+    <div className="rounded-3xl bg-cream px-5 py-6 text-center">
+      <p className="font-display text-sm tracking-[0.08em] text-body/70 uppercase line-through">
+        De {from} por
       </p>
-      <p className="font-display text-4xl text-navy sm:text-5xl">{to}</p>
+      <p className="mt-2 flex items-baseline justify-center gap-1 font-display text-navy">
+        <span className="text-2xl sm:text-3xl">R$</span>
+        <span
+          className="text-5xl text-poke-green sm:text-6xl"
+          style={{ WebkitTextStroke: "2px var(--navy)" }}
+        >
+          {reais}
+        </span>
+        {centavos ? <span className="text-2xl sm:text-3xl">,{centavos}</span> : null}
+      </p>
+      <span className="mt-4 inline-block rounded-full border-2 border-navy bg-poke-yellow px-5 py-1.5 font-display text-[11px] tracking-[0.16em] text-navy uppercase sm:text-xs">
+        Pagamento único
+      </span>
     </div>
   );
 }
+
 
 export function Seals({ light = false }: { light?: boolean }) {
   return (
