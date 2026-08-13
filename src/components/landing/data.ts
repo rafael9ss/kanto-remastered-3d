@@ -1,14 +1,23 @@
 export const CHECKOUT_BASICO = "https://go.perfectpay.com.br/PPU38CQF8CB";
 export const CHECKOUT_PREMIUM = "https://go.perfectpay.com.br/PPU38CQF6N2";
 
-const artwork = (id: number) =>
-  `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+import art6 from "@/assets/media/poke/6.png";
+import art9 from "@/assets/media/poke/9.png";
+import art25 from "@/assets/media/poke/25.png";
+import art150 from "@/assets/media/poke/150.png";
+import art249 from "@/assets/media/poke/249.png";
+import art448 from "@/assets/media/poke/448.png";
+import art487 from "@/assets/media/poke/487.png";
+import pokeBall from "@/assets/media/poke/poke-ball.png";
+import greatBall from "@/assets/media/poke/great-ball.png";
+import ultraBall from "@/assets/media/poke/ultra-ball.png";
 
 export const ball = {
-  poke: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png",
-  great: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png",
-  ultra: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
+  poke: pokeBall,
+  great: greatBall,
+  ultra: ultraBall,
 };
+
 
 export const jogos = [
   { nome: "Pokémon Red Remastered 3D", art: artwork(6), cor: "poke-red" as const },
