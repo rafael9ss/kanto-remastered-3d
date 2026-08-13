@@ -9,6 +9,7 @@ type YouTubePlayer = {
   unMute: () => void;
   setVolume: (volume: number) => void;
   playVideo: () => void;
+  seekTo: (seconds: number, allowSeekAhead?: boolean) => void;
 };
 
 type YouTubeApi = {
