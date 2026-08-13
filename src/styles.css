@@ -179,6 +179,11 @@
 }
 
 /* O navegador adia layout e pintura das seções fora da viewport inicial. */
+.landing-section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+
 .youtube-hero-player iframe {
   position: absolute !important;
   inset: 0;
