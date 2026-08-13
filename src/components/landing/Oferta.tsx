@@ -19,7 +19,7 @@ function CheckoutButton({
 }: {
   href: string;
   children: React.ReactNode;
-  tone: "yellow" | "red" | "muted";
+  tone: "yellow" | "red" | "green" | "muted";
   pulse?: boolean;
 }) {
   return (
@@ -33,6 +33,7 @@ function CheckoutButton({
           : "border-navy shadow-[0_6px_0_0_var(--navy)] active:shadow-[0_2px_0_0_var(--navy)]",
         tone === "yellow" && "bg-poke-yellow text-navy",
         tone === "red" && "bg-poke-red text-surface",
+        tone === "green" && "bg-poke-green text-surface",
       )}
     >
       {children}
