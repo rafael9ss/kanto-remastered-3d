@@ -9,6 +9,7 @@ type YouTubePlayer = {
   unMute: () => void;
   setVolume: (volume: number) => void;
   playVideo: () => void;
+  seekTo: (seconds: number, allowSeekAhead?: boolean) => void;
 };
 
 type YouTubeApi = {
@@ -143,6 +144,7 @@ export function HeroVideo() {
 
     player.unMute();
     player.setVolume(100);
+    player.seekTo(0, true);
     player.playVideo();
     setSoundEnabled(true);
   };
