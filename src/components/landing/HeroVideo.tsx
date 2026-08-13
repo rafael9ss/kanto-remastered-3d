@@ -144,6 +144,7 @@ export function HeroVideo() {
 
     player.unMute();
     player.setVolume(100);
+    player.seekTo(0, true);
     player.playVideo();
     setSoundEnabled(true);
   };
