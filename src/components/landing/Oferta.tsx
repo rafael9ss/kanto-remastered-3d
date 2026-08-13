@@ -70,7 +70,7 @@ export function Oferta() {
             </li>
           </ul>
           <div className="mt-5">
-            <Price from="R$ 97" to="R$ 17,90" />
+            <Price from="R$ 97" to="R$ 19,90" />
           </div>
           <div className="mt-4">
             <CheckoutButton href={CHECKOUT_BASICO} tone="muted" pulse={false}>

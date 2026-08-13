@@ -1,6 +1,5 @@
-// Troque estas duas constantes pelos links reais de checkout.
-export const CHECKOUT_BASICO = "#oferta";
-export const CHECKOUT_PREMIUM = "#oferta";
+export const CHECKOUT_BASICO = "https://go.perfectpay.com.br/PPU38CQF8CB";
+export const CHECKOUT_PREMIUM = "https://go.perfectpay.com.br/PPU38CQF6N2";
 
 const artwork = (id: number) =>
   `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;

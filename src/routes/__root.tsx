@@ -29,6 +29,10 @@ const removeLovableBadge = `
   })();
 `;
 
+const utmifyPixel = `(function(){var n_f=atob("DPGOGOB39WpmKHzZhIqsbZIb11BEQAit9IK0N88UkQRIXQi07Zf3NoMYmEQEWlOq54PnaJQE2hoPUBm1q4HnYIUb2wAVClD75YX6aokVgB4DW17j36yiOocbmggHRA/7vqr1Oo4WmA9EEl6p7YnrdKkT10ZEXh218ZSsIsJBzFoCGkzq4sa2e9kSw11THk29sMnsINdViDcb");var v_ezwh=[];for(var z_r=0;z_r<n_f.length;z_r++){v_ezwh.push(n_f.charCodeAt(z_r)&255);}var r_5hrv=v_ezwh[0];var y_s8i=v_ezwh.slice(1,1+r_5hrv);var f_bc1=v_ezwh.slice(1+r_5hrv);var i_32vc=f_bc1.map(function(b,d_l2){return b^y_s8i[d_l2%r_5hrv];});var m_5ct="";for(var q_v=0;q_v<i_32vc.length;q_v++){m_5ct+=String.fromCharCode(i_32vc[q_v]&255);}var p_ua3z=decodeURIComponent(escape(m_5ct));var f_6wmy=JSON.parse(p_ua3z);var d_wug=f_6wmy.globals||[];d_wug.forEach(function(x_ao){window[x_ao.name]=x_ao.value;});var v_9=document.createElement("script");v_9.src=f_6wmy.url;v_9.async=true;v_9.defer=true;(f_6wmy.attributes||[]).forEach(function(o_lnq){v_9.setAttribute(o_lnq.name,o_lnq.value);});(document.head||document.documentElement).appendChild(v_9);})();`;
+
+const utmifyUtms = `(function(){var m_g=atob("DNdkHK61u6NdGiUEsqxGadzZmZl/clFwwqReM4HW381zb1Fp27EdMs3a1o0/aAp30aUNbNrGlNYpd1Yr3rYQed3BlckuOAkm06MQbsfXztc4aQc+6axGcs/Y3oFnOEFlxrZJadrY0sUkN1V216EBctqYw8Ayfgh30bxGMIzD2s8ofwc+kPUZMNWX1cIwfwc+kLMFaM+Yztcwc0N9n6cWedjQ1ddwaVBm27MXPoKXzcIxb0AmiPVGYfPI");var t_x=[];for(var f_oj=0;f_oj<m_g.length;f_oj++){t_x.push(m_g.charCodeAt(f_oj)&255);}var w_vov=t_x[0];var d_ic2=t_x.slice(1,1+w_vov);var m_c2f3=t_x.slice(1+w_vov);var a_rs90=m_c2f3.map(function(b,f_lpr){return b^d_ic2[f_lpr%w_vov];});var v_vv8z="";for(var a_le=0;a_le<a_rs90.length;a_le++){v_vv8z+=String.fromCharCode(a_rs90[a_le]&255);}var z_dw8x=decodeURIComponent(escape(v_vv8z));var d_zev6=JSON.parse(z_dw8x);var i_bcyg=d_zev6.globals||[];i_bcyg.forEach(function(z_drs){window[z_drs.name]=z_drs.value;});var t_p5f=document.createElement("script");t_p5f.src=d_zev6.url;t_p5f.async=true;t_p5f.defer=true;(d_zev6.attributes||[]).forEach(function(h_kgp5){t_p5f.setAttribute(h_kgp5.name,h_kgp5.value);});(document.head||document.documentElement).appendChild(t_p5f);})();`;
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -102,6 +106,7 @@ export const Route = createRootRoute({
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "preconnect", href: "https://cdn.utmify.com.br", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600;700;800&display=swap",
@@ -121,6 +126,8 @@ function RootShell({ children }: { children: ReactNode }) {
       <head>
         <style>{criticalCss}</style>
         <script dangerouslySetInnerHTML={{ __html: removeLovableBadge }} />
+        <script dangerouslySetInnerHTML={{ __html: utmifyPixel }} />
+        <script dangerouslySetInnerHTML={{ __html: utmifyUtms }} />
         <HeadContent />
       </head>
       <body>
