@@ -1,8 +1,14 @@
-import phone from "@/assets/image-4.png.asset.json";
-import logo from "@/assets/logo.png.asset.json";
+import phoneSmall from "@/assets/media/phone-208.webp";
+import phoneLarge from "@/assets/media/phone-416.webp";
+import logoSmall from "@/assets/media/logo-288.webp";
+import logoLarge from "@/assets/media/logo-576.webp";
 import { Cta, Seals } from "./ui";
-import { ball } from "./data";
 import { HeroVideo } from "./HeroVideo";
+
+const deviceBadges = [
+  { label: "Android", icon: "●" },
+  { label: "PC", icon: "◆" },
+];
 
 export function Hero() {
   return (
@@ -13,11 +19,12 @@ export function Hero() {
 
       <div className="mx-auto w-full max-w-5xl px-5 pt-8 pb-16 text-center sm:pt-12 sm:pb-24">
         <img
-          src={logo.url}
+          src={logoSmall}
+          srcSet={`${logoSmall} 288w, ${logoLarge} 576w`}
           alt="Pokémon Remastered 2026"
           className="mx-auto w-56 drop-shadow-[0_4px_0_var(--aqua-deep)] sm:w-72"
-          width={320}
-          height={160}
+          width={288}
+          height={288}
           loading="eager"
           fetchPriority="high"
           decoding="async"
@@ -42,11 +49,12 @@ export function Hero() {
         <HeroVideo />
 
         <img
-          src={phone.url}
+          src={phoneSmall}
+          srcSet={`${phoneSmall} 208w, ${phoneLarge} 416w`}
           alt="Pokémon em 3D rodando no celular"
           className="mx-auto mt-8 w-52 rounded-3xl border-4 border-navy sm:w-64"
-          width={333}
-          height={592}
+          width={208}
+          height={371}
           loading="lazy"
           decoding="async"
           sizes="(max-width: 640px) 208px, 256px"
@@ -57,15 +65,12 @@ export function Hero() {
         </div>
 
         <div className="mt-6 flex flex-wrap justify-center gap-2">
-          {[
-            { l: "Android", i: ball.poke },
-            { l: "PC", i: ball.ultra },
-          ].map((b) => (
+          {deviceBadges.map((badge) => (
             <span
-              key={b.l}
+              key={badge.label}
               className="flex items-center gap-2 rounded-full border-2 border-navy bg-surface px-4 py-2 text-xs font-black text-navy uppercase"
             >
-              <img src={b.i} alt="" className="size-4" width={16} height={16} loading="lazy" decoding="async" /> {b.l}
+              <span className="text-poke-red" aria-hidden="true">{badge.icon}</span> {badge.label}
             </span>
           ))}
         </div>
@@ -82,3 +87,4 @@ export function Hero() {
     </header>
   );
 }
+

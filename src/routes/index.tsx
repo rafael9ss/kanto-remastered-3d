@@ -9,8 +9,7 @@ import { Oferta } from "@/components/landing/Oferta";
 import { Garantia } from "@/components/landing/Garantia";
 import { Faq } from "@/components/landing/Faq";
 import { Cta } from "@/components/landing/ui";
-import heroCity from "@/assets/image-2.png.asset.json";
-import logo from "@/assets/logo.png.asset.json";
+import logoSmall from "@/assets/media/logo-288.webp";
 
 const SalesNotifications = lazy(() =>
   import("@/components/landing/SalesNotifications").then((module) => ({
@@ -33,8 +32,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
-      { rel: "preload", as: "image", href: logo.url, type: "image/png", fetchPriority: "high" },
-      { rel: "preload", as: "image", href: heroCity.url, type: "image/png", fetchPriority: "high" },
+      { rel: "preload", as: "image", href: logoSmall, type: "image/webp", fetchPriority: "high" },
     ],
   }),
   component: LandingPage,
@@ -85,3 +83,4 @@ function LandingPage() {
     </main>
   );
 }
+

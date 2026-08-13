@@ -1,4 +1,5 @@
-import selo from "@/assets/selo-garantia.png";
+import sealSmall from "@/assets/media/guarantee-220.webp";
+import sealLarge from "@/assets/media/guarantee-440.webp";
 import { Section, Title, Card } from "./ui";
 
 export function Garantia() {
@@ -6,11 +7,12 @@ export function Garantia() {
     <Section id="garantia" variant="aqua">
       <Card className="grid items-center gap-8 p-6 sm:grid-cols-[220px_1fr] sm:p-8">
         <img
-          src={selo}
+          src={sealSmall}
+          srcSet={`${sealSmall} 220w, ${sealLarge} 440w`}
           alt="Selo de garantia incondicional de 14 dias"
           loading="lazy"
-          width={1024}
-          height={1024}
+          width={220}
+          height={220}
           className="mx-auto w-40 sm:w-full"
           decoding="async"
           sizes="(max-width: 640px) 160px, 220px"
@@ -29,3 +31,4 @@ export function Garantia() {
     </Section>
   );
 }
+

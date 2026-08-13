@@ -1,5 +1,6 @@
-import compare from "@/assets/image-6.png.asset.json";
-import kanto from "@/assets/images.jpg.asset.json";
+import compareSmall from "@/assets/media/comparison-400.webp";
+import compareLarge from "@/assets/media/comparison-800.webp";
+import kantoSmall from "@/assets/media/kanto-route-400.webp";
 import { Section, Eyebrow, Title, Check, Cta, Card } from "./ui";
 
 export function Nostalgia() {
@@ -12,22 +13,23 @@ export function Nostalgia() {
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
         <img
-          src={compare.url}
+          src={compareSmall}
+          srcSet={`${compareSmall} 400w, ${compareLarge} 800w`}
           alt="Comparativo entre o Pokémon de 1996 e a versão 3D de 2026"
           loading="lazy"
           className="w-full rounded-3xl border-4 border-navy object-cover"
-          width={480}
-          height={640}
+          width={400}
+          height={533}
           decoding="async"
           sizes="(max-width: 640px) calc(100vw - 40px), 480px"
         />
         <img
-          src={kanto.url}
+          src={kantoSmall}
           alt="Rota de Kanto em visual 3D"
           loading="lazy"
           className="w-full rounded-3xl border-4 border-navy object-cover"
-          width={640}
-          height={640}
+          width={318}
+          height={318}
           decoding="async"
           sizes="(max-width: 640px) calc(100vw - 40px), 640px"
         />
@@ -58,3 +60,4 @@ export function Nostalgia() {
     </Section>
   );
 }
+

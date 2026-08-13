@@ -19,8 +19,8 @@
  */
 
 @theme inline {
-  --font-display: "Archivo Black", system-ui, sans-serif;
-  --font-sans: "Barlow", system-ui, sans-serif;
+  --font-display: Impact, "Arial Black", system-ui, sans-serif;
+  --font-sans: Arial, Helvetica, system-ui, sans-serif;
   --color-poke-red: var(--poke-red);
   --color-poke-blue: var(--poke-blue);
   --color-poke-yellow: var(--poke-yellow);
@@ -239,3 +239,4 @@
 @utility animate-cta-pulse {
   animation: cta-pulse 1.6s ease-in-out infinite;
 }
+

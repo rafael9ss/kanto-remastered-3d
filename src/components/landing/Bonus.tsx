@@ -15,16 +15,7 @@ export function Bonus() {
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
         {bonus.map((b) => (
           <Card key={b.titulo} className="flex gap-4">
-            <img
-              src={b.art}
-              alt=""
-              loading="lazy"
-              className="size-16 shrink-0"
-              width={64}
-              height={64}
-              decoding="async"
-              sizes="64px"
-            />
+            <span className="flex size-16 shrink-0 items-center justify-center rounded-full border-2 border-navy bg-poke-yellow font-display text-xl text-navy" aria-hidden="true">★</span>
             <div>
               <h3 className="font-display text-sm leading-tight text-navy uppercase">{b.titulo}</h3>
               <p className="mt-2 text-sm leading-relaxed text-body">{b.desc}</p>
@@ -49,3 +40,4 @@ export function Bonus() {
     </Section>
   );
 }
+

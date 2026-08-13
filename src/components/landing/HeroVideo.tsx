@@ -82,8 +82,10 @@ export function HeroVideo() {
   useEffect(() => {
     let disposed = false;
     let player: YouTubePlayer | undefined;
+    let idleId: number | undefined;
+    let timeoutId: number | undefined;
 
-    void loadYouTubeApi()
+    const startPlayer = () => void loadYouTubeApi()
       .then((YT) => {
         if (disposed || !mountRef.current) return;
 
@@ -121,8 +123,15 @@ export function HeroVideo() {
         if (!disposed) setFailed(true);
       });
 
+    // Prioriza o conteúdo e o CTA antes de iniciar o player, que é o recurso
+    // externo mais pesado da primeira tela.
+    idleId = window.requestIdleCallback?.(startPlayer, { timeout: 1800 });
+    if (idleId === undefined) timeoutId = window.setTimeout(startPlayer, 900);
+
     return () => {
       disposed = true;
+      if (idleId !== undefined) window.cancelIdleCallback?.(idleId);
+      if (timeoutId !== undefined) window.clearTimeout(timeoutId);
       player?.destroy();
       playerRef.current = null;
     };
@@ -189,3 +198,4 @@ export function HeroVideo() {
     </div>
   );
 }
+
