@@ -8,6 +8,7 @@ export function Garantia() {
       <Card className="grid items-center gap-8 p-6 sm:grid-cols-[220px_1fr] sm:p-8">
         <img
           src={seal}
+          srcSet={`${seal} 220w, ${sealLarge} 440w`}
           alt="Selo de garantia incondicional de 14 dias"
           loading="lazy"
           width={220}
