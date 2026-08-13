@@ -31,6 +31,8 @@
   --color-body: var(--body);
   --color-surface: var(--surface);
   --color-surface-2: var(--surface-2);
+  --color-cream: var(--cream);
+
 
 
   --radius-sm: calc(var(--radius) - 4px);
