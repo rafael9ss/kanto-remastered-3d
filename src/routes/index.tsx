@@ -8,7 +8,7 @@ import { Bonus } from "@/components/landing/Bonus";
 import { Oferta } from "@/components/landing/Oferta";
 import { Garantia } from "@/components/landing/Garantia";
 import { Faq } from "@/components/landing/Faq";
-import { Cta } from "@/components/landing/ui";
+
 import logoUrl from "@/assets/media/logo-288.webp";
 
 const SalesNotifications = lazy(() =>
@@ -70,10 +70,6 @@ function LandingPage() {
         </p>
       </footer>
 
-      {/* CTA fixo mobile */}
-      <div className="sticky bottom-0 z-40 border-t-2 border-navy bg-surface/95 p-3 backdrop-blur sm:hidden">
-        <Cta className="py-4 text-sm">Quero reviver Pokémon em 3D</Cta>
-      </div>
 
       {notificationsReady ? (
         <Suspense fallback={null}>
