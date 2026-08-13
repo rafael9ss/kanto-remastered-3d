@@ -16,7 +16,7 @@ export function Cta({
       href={href}
       suppressHydrationWarning
       className={cn(
-        "block w-full animate-cta-pulse rounded-full border-2 border-navy px-6 py-5 text-center font-display text-base leading-tight tracking-wide uppercase shadow-[0_6px_0_0_var(--navy)] transition-transform hover:-translate-y-0.5 active:translate-y-1 active:shadow-[0_2px_0_0_var(--navy)] motion-reduce:animate-none sm:text-xl",
+        "cta-shine block w-full animate-cta-pulse rounded-full border-2 border-navy px-6 py-5 text-center font-display text-base leading-tight tracking-wide uppercase shadow-[0_6px_0_0_var(--navy)] active:shadow-[0_2px_0_0_var(--navy)] sm:text-xl",
         tone === "yellow" ? "bg-poke-yellow text-navy" : "bg-poke-red text-surface",
         className,
       )}
