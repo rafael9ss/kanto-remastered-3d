@@ -9,7 +9,6 @@ import { Oferta } from "@/components/landing/Oferta";
 import { Garantia } from "@/components/landing/Garantia";
 import { Faq } from "@/components/landing/Faq";
 import { Cta } from "@/components/landing/ui";
-import logoSmall from "@/assets/media/logo-288.webp";
 
 const SalesNotifications = lazy(() =>
   import("@/components/landing/SalesNotifications").then((module) => ({
@@ -30,9 +29,6 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [
-      { rel: "preload", as: "image", href: logoSmall, type: "image/webp", fetchPriority: "high" },
     ],
   }),
   component: LandingPage,

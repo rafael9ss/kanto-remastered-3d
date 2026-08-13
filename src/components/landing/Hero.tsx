@@ -1,7 +1,5 @@
 import phoneSmall from "@/assets/media/phone-208.webp";
 import phoneLarge from "@/assets/media/phone-416.webp";
-import logoSmall from "@/assets/media/logo-288.webp";
-import logoLarge from "@/assets/media/logo-576.webp";
 import { Cta, Seals } from "./ui";
 import { HeroVideo } from "./HeroVideo";
 
@@ -18,18 +16,9 @@ export function Hero() {
       </div>
 
       <div className="mx-auto w-full max-w-5xl px-5 pt-8 pb-16 text-center sm:pt-12 sm:pb-24">
-        <img
-          src={logoSmall}
-          srcSet={`${logoSmall} 288w, ${logoLarge} 576w`}
-          alt="Pokémon Remastered 2026"
-          className="mx-auto w-56 drop-shadow-[0_4px_0_var(--aqua-deep)] sm:w-72"
-          width={288}
-          height={288}
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-          sizes="(max-width: 640px) 224px, 288px"
-        />
+        <div className="mx-auto inline-flex items-center gap-2 rounded-full border-2 border-navy bg-poke-yellow px-5 py-2 font-display text-sm tracking-wide text-navy uppercase shadow-[0_4px_0_var(--navy)] sm:text-base">
+          <span aria-hidden="true">◉</span> Pokémon Remastered 2026
+        </div>
 
         <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase drop-shadow-[0_4px_0_var(--aqua-deep)] sm:text-6xl">
           Reviva Pokémon <span className="text-poke-red">Red</span>,{" "}
