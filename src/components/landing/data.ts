@@ -27,7 +27,7 @@ export const jogos = [
 
 export const bonus = [
   {
-    titulo: "Bônus 1 — 14 Jogos Clássicos Pokémon",
+    titulo: "Bônus 1 — + 50 Jogos Clássicos Pokémon",
     desc: "Red, Blue, Yellow, Gold, Silver, Crystal, Ruby, Sapphire, Emerald, FireRed, LeafGreen, Diamond, Pearl e Platinum.",
     valor: "R$ 97",
     art: art150,
