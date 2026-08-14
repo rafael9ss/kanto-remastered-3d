@@ -89,10 +89,18 @@ export function Oferta() {
             </li>
           </ul>
           <div className="mt-5">
-            <Price from="R$ 97" to="R$ 19,90" />
+            <Price from="R$ 97" to="R$ 14,90" />
           </div>
           <div className="mt-4">
-            <CheckoutButton href={CHECKOUT_BASICO} tone="green" pulse={false}>
+            <CheckoutButton
+              href={CHECKOUT_BASICO}
+              tone="green"
+              pulse={false}
+              onClick={(event) => {
+                event.preventDefault();
+                setUpsellOpen(true);
+              }}
+            >
               Quero o plano básico
             </CheckoutButton>
           </div>
