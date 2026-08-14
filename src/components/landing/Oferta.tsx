@@ -87,6 +87,7 @@ export function Oferta() {
             </CheckoutButton>
           </div>
         </div>
+        ) : null}
 
         {/* Premium */}
         <div className="relative order-1 rounded-[2rem] border-4 border-navy bg-poke-yellow p-2 shadow-[0_14px_0_0_var(--navy)] lg:order-2 lg:-mt-4 lg:scale-[1.03]">
