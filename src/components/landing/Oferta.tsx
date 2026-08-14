@@ -1,5 +1,13 @@
+import { useState } from "react";
 import { Section, Eyebrow, Title, Check, Price, Seals } from "./ui";
-import { CHECKOUT_BASICO, CHECKOUT_PREMIUM, SHOW_PLANO_BASICO, bonus } from "./data";
+import {
+  CHECKOUT_BASICO,
+  CHECKOUT_PREMIUM,
+  CHECKOUT_UPSELL_PREMIUM,
+  SHOW_PLANO_BASICO,
+  bonus,
+} from "./data";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
 const base = [
@@ -16,15 +24,18 @@ function CheckoutButton({
   children,
   tone,
   pulse = true,
+  onClick,
 }: {
   href: string;
   children: React.ReactNode;
   tone: "yellow" | "red" | "green" | "muted";
   pulse?: boolean;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }) {
   return (
     <a
       href={href}
+      onClick={onClick}
       suppressHydrationWarning
       className={cn(
         "block w-full rounded-full border-2 px-6 py-5 text-center font-display text-base uppercase sm:text-lg",
@@ -44,6 +55,8 @@ function CheckoutButton({
 }
 
 export function Oferta() {
+  const [upsellOpen, setUpsellOpen] = useState(false);
+
   return (
     <Section id="oferta" variant="light">
       <div className="text-center">
@@ -79,10 +92,18 @@ export function Oferta() {
             </li>
           </ul>
           <div className="mt-5">
-            <Price from="R$ 97" to="R$ 19,90" />
+            <Price from="R$ 97" to="R$ 14,90" />
           </div>
           <div className="mt-4">
-            <CheckoutButton href={CHECKOUT_BASICO} tone="green" pulse={false}>
+            <CheckoutButton
+              href={CHECKOUT_BASICO}
+              tone="green"
+              pulse={false}
+              onClick={(event) => {
+                event.preventDefault();
+                setUpsellOpen(true);
+              }}
+            >
               Quero o plano básico
             </CheckoutButton>
           </div>
@@ -147,8 +168,37 @@ export function Oferta() {
         </div>
       </div>
 
+      <Dialog open={upsellOpen} onOpenChange={setUpsellOpen}>
+        <DialogContent className="max-w-md rounded-[2rem] border-4 border-navy bg-surface p-6">
+          <DialogTitle className="text-center font-display text-2xl text-navy uppercase">
+            Espera! Leve o Premium por só R$ 19,90
+          </DialogTitle>
+          <DialogDescription className="text-center text-[15px] font-semibold text-body">
+            Por apenas R$ 5 a mais você leva tudo do básico + atualizações constantes + os 5 bônus
+            (R$ 255 em bônus).
+          </DialogDescription>
+
+          <ul className="mt-1 grid gap-2">
+            <Check>Atualizações constantes</Check>
+            {bonus.map((b) => (
+              <Check key={b.titulo}>{b.titulo.replace(/^Bônus \d — /, "")}</Check>
+            ))}
+          </ul>
+
+          <div className="mt-2 grid gap-3">
+            <CheckoutButton href={CHECKOUT_UPSELL_PREMIUM} tone="green">
+              Sim, quero o premium por R$ 19,90
+            </CheckoutButton>
+            <CheckoutButton href={CHECKOUT_BASICO} tone="muted" pulse={false}>
+              Não, continuar com o básico de R$ 14,90
+            </CheckoutButton>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <div className="mt-10">
         <Seals />
+
       </div>
     </Section>
   );
