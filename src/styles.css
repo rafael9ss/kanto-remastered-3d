@@ -281,3 +281,10 @@
     animation: cta-shine 2.8s ease-in-out infinite;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1.5rem;
+  }
+}

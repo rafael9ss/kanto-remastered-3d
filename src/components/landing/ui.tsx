@@ -15,6 +15,15 @@ export function Cta({
     <a
       href={href}
       suppressHydrationWarning
+      onClick={(event) => {
+        if (!href.startsWith("#")) return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        event.preventDefault();
+        const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        target.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+        history.replaceState(null, "", href);
+      }}
       className={cn(
         "cta-shine block w-full animate-cta-pulse rounded-full border-2 border-navy px-6 py-5 text-center font-display text-base leading-tight tracking-wide uppercase shadow-[0_6px_0_0_var(--navy)] active:shadow-[0_2px_0_0_var(--navy)] sm:text-xl",
         tone === "yellow" ? "bg-poke-yellow text-navy" : "bg-poke-red text-surface",
