@@ -1,5 +1,13 @@
+import { useState } from "react";
 import { Section, Eyebrow, Title, Check, Price, Seals } from "./ui";
-import { CHECKOUT_BASICO, CHECKOUT_PREMIUM, SHOW_PLANO_BASICO, bonus } from "./data";
+import {
+  CHECKOUT_BASICO,
+  CHECKOUT_PREMIUM,
+  CHECKOUT_UPSELL_PREMIUM,
+  SHOW_PLANO_BASICO,
+  bonus,
+} from "./data";
+import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
 
 const base = [
