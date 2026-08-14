@@ -1,5 +1,8 @@
 export const CHECKOUT_BASICO = "https://go.perfectpay.com.br/PPU38CQF8CB";
-export const CHECKOUT_PREMIUM = "https://go.perfectpay.com.br/PPU38CQF6N2";
+export const CHECKOUT_PREMIUM = "https://link.syncpayments.com.br/Js3ua5";
+
+/** Temporariamente oculto para teste; voltar para true reexibe o Plano Básico. */
+export const SHOW_PLANO_BASICO = false;
 
 import art6 from "@/assets/media/poke/6.webp";
 import art9 from "@/assets/media/poke/9.webp";
