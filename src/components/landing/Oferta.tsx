@@ -1,5 +1,5 @@
 import { Section, Eyebrow, Title, Check, Price, Seals } from "./ui";
-import { CHECKOUT_BASICO, CHECKOUT_PREMIUM, bonus } from "./data";
+import { CHECKOUT_BASICO, CHECKOUT_PREMIUM, SHOW_PLANO_BASICO, bonus } from "./data";
 import { cn } from "@/lib/utils";
 
 const base = [
