@@ -24,31 +24,36 @@ function CheckoutButton({
   children,
   tone,
   pulse = true,
-  onClick,
+  onPress,
 }: {
-  href: string;
+  href?: string;
   children: React.ReactNode;
   tone: "yellow" | "red" | "green" | "muted";
   pulse?: boolean;
-  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+  onPress?: () => void;
 }) {
-  return (
-    <a
-      href={href}
-      onClick={onClick}
-      suppressHydrationWarning
-      className={cn(
-        "block w-full rounded-full border-2 px-6 py-5 text-center font-display text-base uppercase sm:text-lg",
-        pulse && "animate-cta-pulse",
-        tone === "muted"
-          ? "border-navy/30 bg-transparent py-3.5 text-sm text-navy/60 hover:text-navy sm:text-base"
-          : "cta-shine border-navy shadow-[0_6px_0_0_var(--navy)] active:shadow-[0_2px_0_0_var(--navy)]",
+  const className = cn(
+    "block w-full rounded-full border-2 px-6 py-5 text-center font-display text-base uppercase sm:text-lg",
+    pulse && "animate-cta-pulse",
+    tone === "muted"
+      ? "border-navy/30 bg-transparent py-3.5 text-sm text-navy/60 hover:text-navy sm:text-base"
+      : "cta-shine border-navy shadow-[0_6px_0_0_var(--navy)] active:shadow-[0_2px_0_0_var(--navy)]",
 
-        tone === "yellow" && "bg-poke-yellow text-navy",
-        tone === "red" && "bg-poke-red text-surface",
-        tone === "green" && "bg-poke-green text-surface",
-      )}
-    >
+    tone === "yellow" && "bg-poke-yellow text-navy",
+    tone === "red" && "bg-poke-red text-surface",
+    tone === "green" && "bg-poke-green text-surface",
+  );
+
+  if (onPress) {
+    return (
+      <button type="button" onClick={onPress} suppressHydrationWarning className={className}>
+        {children}
+      </button>
+    );
+  }
+
+  return (
+    <a href={href} suppressHydrationWarning className={className}>
       {children}
     </a>
   );
