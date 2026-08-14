@@ -24,15 +24,18 @@ function CheckoutButton({
   children,
   tone,
   pulse = true,
+  onClick,
 }: {
   href: string;
   children: React.ReactNode;
   tone: "yellow" | "red" | "green" | "muted";
   pulse?: boolean;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }) {
   return (
     <a
       href={href}
+      onClick={onClick}
       suppressHydrationWarning
       className={cn(
         "block w-full rounded-full border-2 px-6 py-5 text-center font-display text-base uppercase sm:text-lg",
