@@ -52,6 +52,8 @@ function CheckoutButton({
 }
 
 export function Oferta() {
+  const [upsellOpen, setUpsellOpen] = useState(false);
+
   return (
     <Section id="oferta" variant="light">
       <div className="text-center">
