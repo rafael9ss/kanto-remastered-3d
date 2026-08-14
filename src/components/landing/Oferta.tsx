@@ -1,5 +1,5 @@
 import { Section, Eyebrow, Title, Check, Price, Seals } from "./ui";
-import { CHECKOUT_BASICO, CHECKOUT_PREMIUM, bonus } from "./data";
+import { CHECKOUT_BASICO, CHECKOUT_PREMIUM, SHOW_PLANO_BASICO, bonus } from "./data";
 import { cn } from "@/lib/utils";
 
 const base = [
@@ -56,8 +56,14 @@ export function Oferta() {
         </div>
       </div>
 
-      <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_1.25fr] lg:items-start lg:gap-8">
+      <div
+        className={cn(
+          "mt-12 grid gap-10 lg:items-start lg:gap-8",
+          SHOW_PLANO_BASICO ? "lg:grid-cols-[1fr_1.25fr]" : "mx-auto max-w-2xl",
+        )}
+      >
         {/* Básico */}
+        {SHOW_PLANO_BASICO ? (
         <div className="order-2 rounded-3xl border border-navy/20 bg-surface/60 p-5 lg:order-1 lg:mt-14 lg:scale-95">
           <h3 className="font-display text-base text-navy/70 uppercase">Plano Básico</h3>
           <p className="mt-1 text-xs font-semibold text-body/70">Pokémon 3D Remastered</p>
@@ -81,6 +87,7 @@ export function Oferta() {
             </CheckoutButton>
           </div>
         </div>
+        ) : null}
 
         {/* Premium */}
         <div className="relative order-1 rounded-[2rem] border-4 border-navy bg-poke-yellow p-2 shadow-[0_14px_0_0_var(--navy)] lg:order-2 lg:-mt-4 lg:scale-[1.03]">
