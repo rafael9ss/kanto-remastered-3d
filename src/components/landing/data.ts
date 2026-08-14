@@ -1,8 +1,9 @@
-export const CHECKOUT_BASICO = "https://go.perfectpay.com.br/PPU38CQF8CB";
-export const CHECKOUT_PREMIUM = "https://link.syncpayments.com.br/Js3ua5";
+export const CHECKOUT_BASICO = "https://checkout.r9ss.site/VCCL1O8SD7WB";
+export const CHECKOUT_PREMIUM = "https://checkout.r9ss.site/VCCL1O8SD7WA";
+/** Upsell exibido no popup ao clicar no plano básico. */
+export const CHECKOUT_UPSELL_PREMIUM = "https://checkout.r9ss.site/VCCL1O8SD7W3";
 
-/** Temporariamente oculto para teste; voltar para true reexibe o Plano Básico. */
-export const SHOW_PLANO_BASICO = false;
+export const SHOW_PLANO_BASICO = true;
 
 import art6 from "@/assets/media/poke/6.webp";
 import art9 from "@/assets/media/poke/9.webp";
