@@ -168,8 +168,37 @@ export function Oferta() {
         </div>
       </div>
 
+      <Dialog open={upsellOpen} onOpenChange={setUpsellOpen}>
+        <DialogContent className="max-w-md rounded-[2rem] border-4 border-navy bg-surface p-6">
+          <DialogTitle className="text-center font-display text-2xl text-navy uppercase">
+            Espera! Leve o Premium por só R$ 19,90
+          </DialogTitle>
+          <DialogDescription className="text-center text-[15px] font-semibold text-body">
+            Por apenas R$ 5 a mais você leva tudo do básico + atualizações constantes + os 5 bônus
+            (R$ 255 em bônus).
+          </DialogDescription>
+
+          <ul className="mt-1 grid gap-2">
+            <Check>Atualizações constantes</Check>
+            {bonus.map((b) => (
+              <Check key={b.titulo}>{b.titulo.replace(/^Bônus \d — /, "")}</Check>
+            ))}
+          </ul>
+
+          <div className="mt-2 grid gap-3">
+            <CheckoutButton href={CHECKOUT_UPSELL_PREMIUM} tone="green">
+              Sim, quero o premium por R$ 19,90
+            </CheckoutButton>
+            <CheckoutButton href={CHECKOUT_BASICO} tone="muted" pulse={false}>
+              Não, continuar com o básico de R$ 14,90
+            </CheckoutButton>
+          </div>
+        </DialogContent>
+      </Dialog>
+
       <div className="mt-10">
         <Seals />
+
       </div>
     </Section>
   );
