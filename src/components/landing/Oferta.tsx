@@ -111,8 +111,16 @@ export function Oferta() {
             <p className="text-[13px] font-semibold text-body/80">
               Veja o Plano Premium com todos os bônus
             </p>
-            <span aria-hidden className="animate-bounce text-2xl leading-none text-poke-red">
-              ↓
+            <span aria-hidden className="mt-1 flex items-end justify-center gap-2">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <span
+                  key={i}
+                  className="animate-bounce text-2xl leading-none text-poke-red sm:text-3xl"
+                  style={{ animationDelay: `${i * 0.12}s` }}
+                >
+                  ▼
+                </span>
+              ))}
             </span>
           </div>
         </div>
