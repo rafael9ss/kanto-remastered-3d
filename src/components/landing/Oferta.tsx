@@ -82,7 +82,7 @@ export function Oferta() {
       >
         {/* Básico */}
         {SHOW_PLANO_BASICO ? (
-        <div className="order-2 rounded-3xl border border-navy/20 bg-surface/60 p-5 lg:order-1 lg:mt-14 lg:scale-95">
+        <div className="order-1 rounded-3xl border border-navy/20 bg-surface/60 p-5 lg:mt-14 lg:scale-95">
           <h3 className="font-display text-base text-navy/70 uppercase">Plano Básico</h3>
           <p className="mt-1 text-xs font-semibold text-body/70">Pokémon 3D Remastered</p>
           <ul className="mt-4 grid gap-2 text-sm">
@@ -104,11 +104,22 @@ export function Oferta() {
               Quero o plano básico
             </CheckoutButton>
           </div>
+          <div className="mt-5 flex flex-col items-center gap-1 rounded-2xl border-2 border-dashed border-poke-red/60 bg-poke-yellow/25 px-4 py-3 text-center">
+            <p className="font-display text-sm uppercase text-navy sm:text-base">
+              Existe uma oferta melhor abaixo
+            </p>
+            <p className="text-[13px] font-semibold text-body/80">
+              Veja o Plano Premium com todos os bônus
+            </p>
+            <span aria-hidden className="animate-bounce text-2xl leading-none text-poke-red">
+              ↓
+            </span>
+          </div>
         </div>
         ) : null}
 
         {/* Premium */}
-        <div className="relative order-1 rounded-[2rem] border-4 border-navy bg-poke-yellow p-2 shadow-[0_14px_0_0_var(--navy)] lg:order-2 lg:-mt-4 lg:scale-[1.03]">
+        <div className="relative order-2 rounded-[2rem] border-4 border-navy bg-poke-yellow p-2 shadow-[0_14px_0_0_var(--navy)] lg:-mt-4 lg:scale-[1.03]">
           <span className="absolute -top-5 left-1/2 z-10 -translate-x-1/2 rounded-full border-2 border-navy bg-poke-red px-5 py-2 text-[11px] font-black tracking-[0.14em] text-surface uppercase shadow-[0_4px_0_0_var(--navy)] sm:text-xs">
             ★ Mais completo · Mais vendido
           </span>
