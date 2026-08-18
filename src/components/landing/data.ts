@@ -1,5 +1,5 @@
 export const CHECKOUT_BASICO = "https://checkout.r9ss.site/VCCL1O8SD7WB";
-export const CHECKOUT_PREMIUM = "https://checkout.r9ss.site/VCCL1O8SD7WA";
+export const CHECKOUT_PREMIUM = "https://checkout.r9ss.site/VCCL1O8SD83Q";
 /** Upsell exibido no popup ao clicar no plano básico. */
 export const CHECKOUT_UPSELL_PREMIUM = "https://checkout.r9ss.site/VCCL1O8SD7W3";
 
