@@ -60,9 +60,16 @@ export function Hero() {
           <span className="text-poke-yellow">Yellow.</span> A mesma nostalgia. Uma nova experiência.
         </p>
 
-        <div className="mt-6">
-          <Seals />
-        </div>
+        <img
+          src={bonusArt}
+          alt="5 bônus grátis: +50 jogos clássicos Pokémon, Kanto/Johto/Hoenn/Sinnoh, trocas e batalhas online, emulador otimizado e guia de instalação — R$ 255 em bônus incluídos"
+          className="mx-auto mt-8 w-full max-w-sm rounded-3xl border-2 border-navy shadow-[0_6px_0_0_var(--navy)]"
+          width={1024}
+          height={1408}
+          loading="lazy"
+          decoding="async"
+          sizes="(max-width: 640px) 100vw, 384px"
+        />
       </div>
     </header>
   );
