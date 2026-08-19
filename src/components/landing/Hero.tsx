@@ -1,7 +1,8 @@
 import logoSmall from "@/assets/media/logo-288.webp";
 import phoneSmall from "@/assets/media/phone-208.webp";
 import phoneLarge from "@/assets/media/phone-416.webp";
-import { Cta, Seals } from "./ui";
+import bonusArt from "@/assets/media/bonus-art.png";
+import { Cta } from "./ui";
 import { HeroVideo } from "./HeroVideo";
 
 export function Hero() {
