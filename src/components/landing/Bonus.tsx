@@ -13,6 +13,17 @@ export function Bonus() {
         </p>
       </div>
 
+      <img
+        src={bonusArt}
+        alt="Arte com os 5 bônus grátis: +50 jogos clássicos, 4 regiões, batalhas online, emulador otimizado e guia de instalação — R$ 255 em bônus incluídos"
+        className="mx-auto mt-8 w-full max-w-md rounded-3xl border-2 border-navy shadow-[0_6px_0_0_var(--navy)]"
+        width={1024}
+        height={1408}
+        loading="lazy"
+        decoding="async"
+        sizes="(max-width: 640px) 100vw, 448px"
+      />
+
       <div className="mt-8 grid gap-4 sm:grid-cols-2">
         {bonus.map((b) => (
           <Card key={b.titulo} className="flex gap-4">
