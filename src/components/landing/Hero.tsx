@@ -7,9 +7,6 @@ import { HeroVideo } from "./HeroVideo";
 export function Hero() {
   return (
     <header className="hero-shell bg-kanto">
-      <div className="bg-poke-red px-4 py-2.5 text-center text-[11px] font-black tracking-[0.12em] text-surface uppercase sm:text-xs">
-        ● Oferta válida hoje ● Acesso imediato após a compra
-      </div>
 
       <div className="mx-auto w-full max-w-5xl px-5 pt-8 pb-16 text-center sm:pt-12 sm:pb-24">
         <img
