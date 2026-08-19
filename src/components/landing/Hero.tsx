@@ -4,11 +4,6 @@ import phoneLarge from "@/assets/media/phone-416.webp";
 import { Cta, Seals } from "./ui";
 import { HeroVideo } from "./HeroVideo";
 
-const deviceBadges = [
-  { label: "Android", icon: ball.poke },
-  { label: "PC", icon: ball.ultra },
-];
-
 export function Hero() {
   return (
     <header className="hero-shell bg-kanto">
