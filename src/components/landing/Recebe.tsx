@@ -67,7 +67,7 @@ export function Recebe() {
       </Card>
 
       <div className="mx-auto mt-8 max-w-xl">
-        <Cta>Quero reviver Pokémon em 3D</Cta>
+        <Cta>Quero jogar Pokémon 3D</Cta>
       </div>
     </Section>
   );

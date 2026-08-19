@@ -3,12 +3,6 @@ import phoneSmall from "@/assets/media/phone-208.webp";
 import phoneLarge from "@/assets/media/phone-416.webp";
 import { Cta, Seals } from "./ui";
 import { HeroVideo } from "./HeroVideo";
-import { ball } from "./data";
-
-const deviceBadges = [
-  { label: "Android", icon: ball.poke },
-  { label: "PC", icon: ball.ultra },
-];
 
 export function Hero() {
   return (
@@ -48,7 +42,7 @@ export function Hero() {
         <HeroVideo />
 
         <div className="mx-auto mt-8 max-w-xl">
-          <Cta className="hero-cta">Quero reviver Pokémon em 3D</Cta>
+          <Cta className="hero-cta">Quero jogar Pokémon 3D</Cta>
         </div>
 
         <img
@@ -63,26 +57,6 @@ export function Hero() {
           sizes="(max-width: 640px) 208px, 256px"
         />
 
-
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
-          {deviceBadges.map((badge) => (
-            <span
-              key={badge.label}
-              className="flex items-center gap-2 rounded-full border-2 border-navy bg-surface px-4 py-2 text-xs font-black text-navy uppercase"
-            >
-              <img
-                src={badge.icon}
-                alt=""
-                className="size-4"
-                width={16}
-                height={16}
-                loading="eager"
-                decoding="async"
-              />{" "}
-              {badge.label}
-            </span>
-          ))}
-        </div>
 
         <p className="mt-6 font-display text-sm text-surface uppercase drop-shadow-[0_2px_0_var(--aqua-deep)]">
           <span className="text-poke-red">Red.</span> <span className="text-poke-blue">Blue.</span>{" "}
