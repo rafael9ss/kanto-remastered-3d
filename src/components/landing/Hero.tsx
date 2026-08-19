@@ -48,7 +48,7 @@ export function Hero() {
         <HeroVideo />
 
         <div className="mx-auto mt-8 max-w-xl">
-          <Cta className="hero-cta">Quero reviver Pokémon em 3D</Cta>
+          <Cta className="hero-cta">Quero jogar Pokémon 3D</Cta>
         </div>
 
         <img

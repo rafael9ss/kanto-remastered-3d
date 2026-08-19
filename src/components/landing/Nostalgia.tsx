@@ -55,7 +55,7 @@ export function Nostalgia() {
       </p>
 
       <div className="mx-auto mt-8 max-w-xl">
-        <Cta tone="red">Quero reviver Kanto em 3D</Cta>
+        <Cta tone="red">Quero jogar Pokémon 3D</Cta>
       </div>
     </Section>
   );
