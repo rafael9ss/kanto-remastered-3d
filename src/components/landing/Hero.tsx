@@ -64,26 +64,6 @@ export function Hero() {
         />
 
 
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
-          {deviceBadges.map((badge) => (
-            <span
-              key={badge.label}
-              className="flex items-center gap-2 rounded-full border-2 border-navy bg-surface px-4 py-2 text-xs font-black text-navy uppercase"
-            >
-              <img
-                src={badge.icon}
-                alt=""
-                className="size-4"
-                width={16}
-                height={16}
-                loading="eager"
-                decoding="async"
-              />{" "}
-              {badge.label}
-            </span>
-          ))}
-        </div>
-
         <p className="mt-6 font-display text-sm text-surface uppercase drop-shadow-[0_2px_0_var(--aqua-deep)]">
           <span className="text-poke-red">Red.</span> <span className="text-poke-blue">Blue.</span>{" "}
           <span className="text-poke-yellow">Yellow.</span> A mesma nostalgia. Uma nova experiência.
