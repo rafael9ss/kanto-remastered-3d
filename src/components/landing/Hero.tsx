@@ -3,7 +3,6 @@ import phoneSmall from "@/assets/media/phone-208.webp";
 import phoneLarge from "@/assets/media/phone-416.webp";
 import { Cta, Seals } from "./ui";
 import { HeroVideo } from "./HeroVideo";
-import { ball } from "./data";
 
 const deviceBadges = [
   { label: "Android", icon: ball.poke },
