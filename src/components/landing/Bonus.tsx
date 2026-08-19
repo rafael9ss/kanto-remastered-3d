@@ -1,5 +1,6 @@
 import { Section, Eyebrow, Title, Cta, Card } from "./ui";
 import { bonus } from "./data";
+import bonusArt from "@/assets/media/bonus-art.png";
 
 export function Bonus() {
   return (
