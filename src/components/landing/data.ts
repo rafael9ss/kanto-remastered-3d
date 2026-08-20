@@ -1,8 +1,10 @@
-export const CHECKOUT_BASICO = "https://checkout.payt.com.br/2e10e1fd1afe135b1516b902849a66cb";
-export const CHECKOUT_PREMIUM = "https://checkout.payt.com.br/a8230581b5b372ce2eef6308e496588f";
+export const CHECKOUT_BASICO =
+  "https://checkout.payt.com.br/2e10e1fd1afe135b1516b902849a66cb?payment=pix";
+export const CHECKOUT_PREMIUM =
+  "https://checkout.payt.com.br/a8230581b5b372ce2eef6308e496588f?payment=pix";
 /** Upsell exibido no popup ao clicar no plano básico. */
 export const CHECKOUT_UPSELL_PREMIUM =
-  "https://checkout.payt.com.br/83f427518b67831143af8e9aba36d30d";
+  "https://checkout.payt.com.br/83f427518b67831143af8e9aba36d30d?payment=pix";
 
 export const SHOW_PLANO_BASICO = true;
 
