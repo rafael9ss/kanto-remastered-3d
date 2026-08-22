@@ -111,7 +111,7 @@ export function Price({ from, to }: { from: string; to: string }) {
       <p className="mt-2 flex items-baseline justify-center gap-1 font-display text-navy">
         <span className="text-2xl sm:text-3xl">R$</span>
         <span
-          className="text-5xl text-poke-green sm:text-6xl"
+          className="text-5xl text-poke-green-deep sm:text-6xl"
           style={{ WebkitTextStroke: "2px var(--navy)" }}
         >
           {reais}
