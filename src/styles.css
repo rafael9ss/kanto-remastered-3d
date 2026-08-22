@@ -210,12 +210,12 @@
   background-image:
     repeating-linear-gradient(
       -45deg,
-      color-mix(in oklab, white 14%, transparent) 0px,
-      color-mix(in oklab, white 14%, transparent) 14px,
+      color-mix(in oklab, white 6%, transparent) 0px,
+      color-mix(in oklab, white 6%, transparent) 14px,
       transparent 14px,
       transparent 28px
     ),
-    linear-gradient(140deg, oklch(0.82 0.13 235), oklch(0.87 0.13 190));
+    linear-gradient(140deg, oklch(0.18 0 0), oklch(0.26 0 0));
 }
 
 @utility text-stroke-navy {
