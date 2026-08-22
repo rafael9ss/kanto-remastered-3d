@@ -56,14 +56,14 @@ export function ProvaSocial() {
                 sizes="(max-width: 640px) calc(100vw - 56px), 320px"
               />
             </div>
-            <figcaption className="mt-2 text-center text-xs font-black uppercase tracking-wide text-navy/70">
+            <figcaption className="mt-2 text-center text-xs font-black uppercase tracking-wide text-navy">
               {"\n"}
             </figcaption>
           </figure>
         ))}
       </div>
 
-      <p className="mt-6 text-center text-sm font-bold text-navy/80">
+      <p className="mt-6 text-center text-sm font-bold text-navy">
         Resultados reais de quem já reviviu Kanto em 3D.
       </p>
     </Section>

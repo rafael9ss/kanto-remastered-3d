@@ -68,7 +68,7 @@ export function SalesNotifications() {
           type="button"
           aria-label="Fechar notificação"
           onClick={() => setClosed(true)}
-          className="absolute top-2 right-2 text-navy/50 transition-colors hover:text-navy"
+          className="absolute top-2 right-2 flex size-8 items-center justify-center rounded-full text-navy transition-colors hover:text-poke-red"
         >
           <X className="size-4" />
         </button>

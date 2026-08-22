@@ -17,7 +17,7 @@ export function Nostalgia() {
           srcSet={`${compareSmall} 400w, ${compareLarge} 800w`}
           alt="Comparativo entre o Pokémon de 1996 e a versão 3D de 2026"
           loading="lazy"
-          className="w-full rounded-3xl border-4 border-navy object-cover"
+          className="w-full rounded-3xl border-4 border-surface object-cover"
           width={400}
           height={533}
           decoding="async"
@@ -27,7 +27,7 @@ export function Nostalgia() {
           src={kantoSmall}
           alt="Rota de Kanto em visual 3D"
           loading="lazy"
-          className="w-full rounded-3xl border-4 border-navy object-cover"
+          className="w-full rounded-3xl border-4 border-surface object-cover"
           width={318}
           height={318}
           decoding="async"

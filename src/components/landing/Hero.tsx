@@ -24,7 +24,7 @@ export function Hero() {
 
         <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase drop-shadow-[0_4px_0_var(--surface)] sm:text-6xl">
           Reviva Pokémon <span className="text-poke-red">Red</span>,{" "}
-          <span className="text-poke-blue">Blue</span> e{" "}
+          <span className="text-poke-blue-light">Blue</span> e{" "}
           <span className="text-poke-yellow">Yellow</span> em{" "}
           <span className="inline-block rounded-xl border-2 border-navy bg-poke-yellow px-3 text-navy drop-shadow-none">
             3D
@@ -32,7 +32,7 @@ export function Hero() {
           — Agora no Android e PC
         </h1>
 
-        <p className="mx-auto mt-5 max-w-2xl rounded-full border-2 border-poke-yellow bg-surface px-5 py-3 text-sm font-bold text-poke-blue sm:text-base">
+        <p className="mx-auto mt-5 max-w-2xl rounded-full border-2 border-poke-yellow bg-surface px-5 py-3 text-sm font-bold text-navy sm:text-base">
           O Pokémon da sua infância com visual remasterizado em 3D, pronto para você instalar e
           voltar para Kanto em minutos.
         </p>
@@ -47,7 +47,7 @@ export function Hero() {
           src={phoneSmall}
           srcSet={`${phoneSmall} 208w, ${phoneLarge} 416w`}
           alt="Pokémon em 3D rodando no celular"
-          className="mx-auto mt-8 w-52 rounded-3xl border-4 border-navy sm:w-64"
+          className="mx-auto mt-8 w-52 rounded-3xl border-4 border-surface sm:w-64"
           width={208}
           height={371}
           loading="lazy"
@@ -57,14 +57,14 @@ export function Hero() {
 
 
         <p className="mt-6 font-display text-sm text-surface uppercase drop-shadow-[0_2px_0_var(--surface)]">
-          <span className="text-poke-red">Red.</span> <span className="text-poke-blue">Blue.</span>{" "}
+          <span className="text-poke-red">Red.</span> <span className="text-poke-blue-light">Blue.</span>{" "}
           <span className="text-poke-yellow">Yellow.</span> A mesma nostalgia. Uma nova experiência.
         </p>
 
         <img
           src={bonusArt}
           alt="5 bônus grátis: +50 jogos clássicos Pokémon, Kanto/Johto/Hoenn/Sinnoh, trocas e batalhas online, emulador otimizado e guia de instalação — R$ 255 em bônus incluídos"
-          className="mx-auto mt-8 w-full max-w-sm rounded-3xl border-2 border-navy shadow-[0_6px_0_0_var(--navy)]"
+          className="mx-auto mt-8 w-full max-w-sm rounded-3xl border-2 border-surface shadow-[0_6px_0_0_var(--aqua-deep)]"
           width={1024}
           height={1408}
           loading="lazy"

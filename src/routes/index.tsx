@@ -53,7 +53,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <main className="min-h-screen bg-surface-2 font-sans text-body antialiased">
+    <main className="min-h-dvh bg-surface-2 font-sans text-body antialiased">
       <Hero />
       <Recebe />
       <Nostalgia />
@@ -65,7 +65,7 @@ function LandingPage() {
 
       <footer className="bg-navy px-5 py-10 text-center">
         <p className="font-display text-sm text-surface uppercase">Pokémon 3D Remastered 2026</p>
-        <p className="mt-2 text-sm text-surface/70">
+        <p className="mt-2 text-sm text-surface/90">
           Red. Blue. Yellow. A mesma nostalgia. Uma nova experiência.
         </p>
       </footer>
