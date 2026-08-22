@@ -25,6 +25,8 @@
   --color-poke-blue: var(--poke-blue);
   --color-poke-yellow: var(--poke-yellow);
   --color-poke-green: var(--poke-green);
+  --color-poke-green-deep: var(--poke-green-deep);
+  --color-poke-blue-light: var(--poke-blue-light);
   --color-aqua: var(--aqua);
   --color-aqua-deep: var(--aqua-deep);
   --color-navy: var(--navy);
@@ -82,6 +84,8 @@
   --poke-blue: oklch(0.2 0 0);
   --poke-yellow: oklch(0.87 0.17 90);
   --poke-green: oklch(0.68 0.19 148);
+  --poke-green-deep: oklch(0.5 0.14 148);
+  --poke-blue-light: oklch(0.75 0.15 250);
   --aqua: oklch(0.22 0 0);
   --aqua-deep: oklch(0.15 0 0);
   --navy: oklch(0.15 0 0);

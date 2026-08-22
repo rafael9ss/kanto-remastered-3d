@@ -36,12 +36,12 @@ function CheckoutButton({
     "block w-full rounded-full border-2 px-6 py-5 text-center font-display text-base uppercase sm:text-lg",
     pulse && "animate-cta-pulse",
     tone === "muted"
-      ? "border-navy/30 bg-transparent py-3.5 text-sm text-navy/60 hover:text-navy sm:text-base"
+      ? "border-navy/30 bg-transparent py-3.5 text-sm text-navy/80 hover:text-navy sm:text-base"
       : "cta-shine border-navy shadow-[0_6px_0_0_var(--navy)] active:shadow-[0_2px_0_0_var(--navy)]",
 
     tone === "yellow" && "bg-poke-yellow text-navy",
     tone === "red" && "bg-poke-red text-surface",
-    tone === "green" && "bg-poke-green text-surface",
+    tone === "green" && "bg-poke-green-deep text-surface",
   );
 
   if (onPress) {
@@ -83,13 +83,13 @@ export function Oferta() {
         {/* Básico */}
         {SHOW_PLANO_BASICO ? (
         <div className="order-1 rounded-3xl border border-navy/20 bg-surface/60 p-5 lg:mt-14 lg:scale-95">
-          <h3 className="font-display text-base text-navy/70 uppercase">Plano Básico</h3>
-          <p className="mt-1 text-xs font-semibold text-body/70">Pokémon 3D Remastered</p>
+          <h3 className="font-display text-base text-navy uppercase">Plano Básico</h3>
+          <p className="mt-1 text-xs font-semibold text-body">Pokémon 3D Remastered</p>
           <ul className="mt-4 grid gap-2 text-sm">
             {base.map((i) => (
               <Check key={i}>{i}</Check>
             ))}
-            <li className="flex items-start gap-3 text-body/70">
+            <li className="flex items-start gap-3 text-body">
               <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-poke-red text-[11px] font-black text-surface">
                 ✕
               </span>
@@ -108,7 +108,7 @@ export function Oferta() {
             <p className="font-display text-sm uppercase text-navy sm:text-base">
               Existe uma oferta melhor abaixo
             </p>
-            <p className="text-[13px] font-semibold text-body/80">
+            <p className="text-[13px] font-semibold text-body">
               Veja o Plano Premium com todos os bônus
             </p>
             <span aria-hidden className="mt-1 flex items-end justify-center gap-2">

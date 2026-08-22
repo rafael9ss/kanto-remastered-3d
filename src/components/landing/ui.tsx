@@ -105,7 +105,7 @@ export function Price({ from, to }: { from: string; to: string }) {
   const [reais, centavos] = to.replace(/^R\$\s*/, "").split(",");
   return (
     <div className="rounded-3xl bg-cream px-5 py-6 text-center">
-      <p className="font-display text-sm tracking-[0.08em] text-body/70 uppercase line-through">
+      <p className="font-display text-sm tracking-[0.08em] text-body uppercase line-through">
         De {from} por
       </p>
       <p className="mt-2 flex items-baseline justify-center gap-1 font-display text-navy">
