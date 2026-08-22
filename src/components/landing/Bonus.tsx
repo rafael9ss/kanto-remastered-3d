@@ -40,7 +40,7 @@ export function Bonus() {
         ))}
       </div>
 
-      <p className="mt-8 text-center font-display text-2xl text-surface uppercase drop-shadow-[0_3px_0_var(--surface)]">
+      <p className="mt-8 text-center font-display text-2xl text-surface uppercase">
         R$ 255 em bônus incluídos
       </p>
 
