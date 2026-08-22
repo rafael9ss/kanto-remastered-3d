@@ -24,9 +24,9 @@ const loadFonts = `(() => {
 })();`.replace('__FONT__', FONT_CSS);
 
 const criticalCss = `
-  :root { background: #e9f9ff; color: #1d3352; }
-  body { margin: 0; background: #e9f9ff; font-family: Barlow, system-ui, sans-serif; }
-  .hero-shell { min-height: 760px; background: #43c9db; }
+  :root { background: #0a0a0a; color: #f5f5f5; }
+  body { margin: 0; background: #0a0a0a; font-family: Barlow, system-ui, sans-serif; }
+  .hero-shell { min-height: 760px; background: #1a1a1a; }
   .hero-cta { min-height: 56px; }
 `;
 

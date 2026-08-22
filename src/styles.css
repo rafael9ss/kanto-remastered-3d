@@ -79,15 +79,15 @@
 
 :root {
   --poke-red: oklch(0.58 0.23 30);
-  --poke-blue: oklch(0.52 0.16 250);
+  --poke-blue: oklch(0.2 0 0);
   --poke-yellow: oklch(0.87 0.17 90);
   --poke-green: oklch(0.68 0.19 148);
-  --aqua: oklch(0.85 0.13 200);
-  --aqua-deep: oklch(0.72 0.14 210);
-  --navy: oklch(0.32 0.09 250);
+  --aqua: oklch(0.22 0 0);
+  --aqua-deep: oklch(0.15 0 0);
+  --navy: oklch(0.15 0 0);
   --body: oklch(0.45 0.04 250);
   --surface: oklch(1 0 0);
-  --surface-2: oklch(0.97 0.015 220);
+  --surface-2: oklch(0.96 0 0);
   --cream: oklch(0.975 0.028 95);
 
 
@@ -210,12 +210,12 @@
   background-image:
     repeating-linear-gradient(
       -45deg,
-      color-mix(in oklab, white 14%, transparent) 0px,
-      color-mix(in oklab, white 14%, transparent) 14px,
+      color-mix(in oklab, white 6%, transparent) 0px,
+      color-mix(in oklab, white 6%, transparent) 14px,
       transparent 14px,
       transparent 28px
     ),
-    linear-gradient(140deg, oklch(0.82 0.13 235), oklch(0.87 0.13 190));
+    linear-gradient(140deg, oklch(0.18 0 0), oklch(0.26 0 0));
 }
 
 @utility text-stroke-navy {

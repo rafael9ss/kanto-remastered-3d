@@ -13,7 +13,7 @@ export function Hero() {
         <img
           src={logoSmall}
           alt="Pokémon Remastered 2026"
-          className="mx-auto w-56 drop-shadow-[0_4px_0_var(--aqua-deep)] sm:w-72"
+          className="mx-auto w-56 drop-shadow-[0_4px_0_var(--surface)] sm:w-72"
           width={288}
           height={157}
           loading="eager"
@@ -22,7 +22,7 @@ export function Hero() {
           sizes="(max-width: 640px) 224px, 288px"
         />
 
-        <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase drop-shadow-[0_4px_0_var(--aqua-deep)] sm:text-6xl">
+        <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase drop-shadow-[0_4px_0_var(--surface)] sm:text-6xl">
           Reviva Pokémon <span className="text-poke-red">Red</span>,{" "}
           <span className="text-poke-blue">Blue</span> e{" "}
           <span className="text-poke-yellow">Yellow</span> em{" "}
@@ -56,7 +56,7 @@ export function Hero() {
         />
 
 
-        <p className="mt-6 font-display text-sm text-surface uppercase drop-shadow-[0_2px_0_var(--aqua-deep)]">
+        <p className="mt-6 font-display text-sm text-surface uppercase drop-shadow-[0_2px_0_var(--surface)]">
           <span className="text-poke-red">Red.</span> <span className="text-poke-blue">Blue.</span>{" "}
           <span className="text-poke-yellow">Yellow.</span> A mesma nostalgia. Uma nova experiência.
         </p>

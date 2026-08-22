@@ -81,7 +81,7 @@ export function Title({
     <h2
       className={cn(
         "font-display text-3xl leading-[1.05] uppercase sm:text-5xl",
-        onAqua ? "text-surface drop-shadow-[0_3px_0_var(--aqua-deep)]" : "text-navy",
+        onAqua ? "text-surface drop-shadow-[0_3px_0_var(--surface)]" : "text-navy",
         className,
       )}
     >
