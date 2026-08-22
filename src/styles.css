@@ -22,6 +22,7 @@
   --font-display: "Archivo Black", system-ui, sans-serif;
   --font-sans: "Barlow", system-ui, sans-serif;
   --color-poke-red: var(--poke-red);
+  --color-poke-red-light: var(--poke-red-light);
   --color-poke-blue: var(--poke-blue);
   --color-poke-yellow: var(--poke-yellow);
   --color-poke-green: var(--poke-green);
@@ -81,6 +82,8 @@
 
 :root {
   --poke-red: oklch(0.58 0.23 30);
+  /* Variante clara do vermelho para uso sobre fundos escuros (AA/AAA) */
+  --poke-red-light: oklch(0.75 0.17 32);
   --poke-blue: oklch(0.2 0 0);
   --poke-yellow: oklch(0.87 0.17 90);
   --poke-green: oklch(0.68 0.19 148);
