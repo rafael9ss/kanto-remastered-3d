@@ -169,8 +169,8 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
-/* Modo de alto contraste: reforça tokens para leitura em baixa visibilidade. */
-.high-contrast {
+/* Contraste reforçado aplicado por padrão. */
+:root {
   --poke-red-light: oklch(0.82 0.16 32);
   --poke-blue-light: oklch(0.85 0.12 250);
   --poke-yellow: oklch(0.93 0.17 95);
@@ -184,18 +184,13 @@
   --cream: oklch(1 0 0);
 }
 
-.high-contrast .bg-kanto {
-  background-image: none;
-  background-color: var(--aqua);
-}
 
-.high-contrast .text-surface\/90,
-.high-contrast [class*="text-surface\\/"] {
+[class*="text-surface\\/"] {
   color: var(--surface);
 }
 
-.high-contrast a:focus-visible,
-.high-contrast button:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 3px solid var(--poke-yellow);
   outline-offset: 3px;
 }
