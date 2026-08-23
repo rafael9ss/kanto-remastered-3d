@@ -47,7 +47,6 @@ const utmifyUtms = `(function(){var m_g=atob("DNdkHK61u6NdGiUEsqxGadzZmZl/clFwwq
 
 const clarity = `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "y1r3feam6q");`;
 
-const highContrastBoot = `(function(){try{if(localStorage.getItem('pkm-high-contrast')==='1'){document.documentElement.classList.add('high-contrast');}}catch(e){}})();`;
 
 const tracking = `${utmifyPixel} ${utmifyUtms} ${clarity}`;
 
@@ -145,7 +144,6 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pt-BR">
       <head>
         <style>{criticalCss}</style>
-        <script dangerouslySetInnerHTML={{ __html: highContrastBoot }} />
         <script dangerouslySetInnerHTML={{ __html: removeLovableBadge }} />
         <script dangerouslySetInnerHTML={{ __html: loadFonts }} />
         <script dangerouslySetInnerHTML={{ __html: tracking }} />

@@ -8,7 +8,6 @@ import { Bonus } from "@/components/landing/Bonus";
 import { Oferta } from "@/components/landing/Oferta";
 import { Garantia } from "@/components/landing/Garantia";
 import { Faq } from "@/components/landing/Faq";
-import { HighContrastToggle } from "@/components/landing/HighContrastToggle";
 
 import logoUrl from "@/assets/media/logo-288.webp";
 
@@ -71,8 +70,6 @@ function LandingPage() {
         </p>
       </footer>
 
-
-      <HighContrastToggle />
 
       {notificationsReady ? (
         <Suspense fallback={null}>
