@@ -184,10 +184,6 @@
   --cream: oklch(1 0 0);
 }
 
-.bg-kanto-hc {
-  background-image: none;
-  background-color: var(--aqua);
-}
 
 [class*="text-surface\\/"] {
   color: var(--surface);
