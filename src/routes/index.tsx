@@ -72,6 +72,8 @@ function LandingPage() {
       </footer>
 
 
+      <HighContrastToggle />
+
       {notificationsReady ? (
         <Suspense fallback={null}>
           <SalesNotifications />
