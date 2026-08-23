@@ -145,6 +145,7 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="pt-BR">
       <head>
         <style>{criticalCss}</style>
+        <script dangerouslySetInnerHTML={{ __html: highContrastBoot }} />
         <script dangerouslySetInnerHTML={{ __html: removeLovableBadge }} />
         <script dangerouslySetInnerHTML={{ __html: loadFonts }} />
         <script dangerouslySetInnerHTML={{ __html: tracking }} />
