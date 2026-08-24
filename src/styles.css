@@ -235,7 +235,7 @@ button:focus-visible {
       transparent 14px,
       transparent 28px
     ),
-    linear-gradient(140deg, oklch(0.18 0 0), oklch(0.26 0 0));
+    linear-gradient(140deg, oklch(0.82 0.12 195), oklch(0.72 0.14 205));
 }
 
 @utility text-stroke-navy {
