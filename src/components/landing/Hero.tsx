@@ -22,30 +22,34 @@ export function Hero() {
           sizes="(max-width: 640px) 224px, 288px"
         />
 
-        <h1 className="mt-6 font-display text-[2rem] leading-[1.15] text-navy uppercase sm:text-6xl">
+        <h1 className="mx-auto mt-6 max-w-[18ch] text-balance font-display text-[1.75rem] leading-[1.12] tracking-tight text-navy uppercase sm:max-w-[22ch] sm:text-5xl lg:text-6xl">
           Reviva Pokémon{" "}
-          <span className="inline-block rounded-lg border-2 border-navy bg-poke-red-light px-2 text-navy">
+          <span className="inline-block whitespace-nowrap rounded-lg border-2 border-navy bg-poke-red-light px-1.5 text-navy">
             Red
           </span>
           ,{" "}
-          <span className="inline-block rounded-lg border-2 border-navy bg-poke-blue-light px-2 text-navy">
+          <span className="inline-block whitespace-nowrap rounded-lg border-2 border-navy bg-poke-blue-light px-1.5 text-navy">
             Blue
           </span>{" "}
           e{" "}
-          <span className="inline-block rounded-lg border-2 border-navy bg-poke-yellow px-2 text-navy">
+          <span className="inline-block whitespace-nowrap rounded-lg border-2 border-navy bg-poke-yellow px-1.5 text-navy">
             Yellow
           </span>{" "}
           agora em{" "}
-          <span className="inline-block rounded-xl border-2 border-navy bg-surface px-3 text-navy">
+          <span className="inline-block whitespace-nowrap rounded-xl border-2 border-navy bg-surface px-2 text-navy">
             3D
-          </span>{" "}
-          no Android e no PC
+          </span>
         </h1>
 
-        <p className="mx-auto mt-5 max-w-2xl rounded-2xl border-2 border-navy bg-surface px-5 py-4 text-[15px] leading-relaxed font-bold text-navy sm:text-lg">
+        <p className="mx-auto mt-3 max-w-[24ch] text-balance font-display text-sm leading-snug tracking-[0.08em] text-navy uppercase sm:text-base">
+          No Android e no PC
+        </p>
+
+        <p className="mx-auto mt-5 max-w-xl text-pretty rounded-2xl border-2 border-navy bg-surface px-5 py-4 text-[15px] leading-relaxed font-semibold text-navy sm:text-lg">
           O Pokémon da sua infância, remasterizado em 3D. Instale em minutos e volte a explorar
           Kanto hoje mesmo — sem console novo e sem complicação.
         </p>
+
 
 
         <HeroVideo />
