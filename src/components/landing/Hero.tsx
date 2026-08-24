@@ -23,9 +23,10 @@ export function Hero() {
         />
 
         <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase sm:text-6xl">
-          Reviva Pokémon <span className="text-poke-red">Red</span>,{" "}
-          <span className="text-poke-blue">Blue</span> e{" "}
-          <span className="text-poke-yellow">Yellow</span> em{" "}
+          Reviva Pokémon{" "}
+          <span className="rounded-lg bg-navy px-2 text-poke-red-light">Red</span>,{" "}
+          <span className="rounded-lg bg-navy px-2 text-poke-blue-light">Blue</span> e{" "}
+          <span className="rounded-lg bg-navy px-2 text-poke-yellow">Yellow</span> em{" "}
           <span className="inline-block rounded-xl border-2 border-navy bg-poke-yellow px-3 text-navy drop-shadow-none">
             3D
           </span>{" "}
