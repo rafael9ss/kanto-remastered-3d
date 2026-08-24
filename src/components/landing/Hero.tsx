@@ -22,7 +22,7 @@ export function Hero() {
           sizes="(max-width: 640px) 224px, 288px"
         />
 
-        <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase sm:text-6xl">
+        <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-navy uppercase sm:text-6xl">
           Reviva Pokémon{" "}
           <span className="rounded-lg bg-navy px-2 text-poke-red-light">Red</span>,{" "}
           <span className="rounded-lg bg-navy px-2 text-poke-blue-light">Blue</span> e{" "}
