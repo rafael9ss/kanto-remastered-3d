@@ -22,21 +22,31 @@ export function Hero() {
           sizes="(max-width: 640px) 224px, 288px"
         />
 
-        <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-navy uppercase sm:text-6xl">
+        <h1 className="mt-6 font-display text-[2rem] leading-[1.15] text-navy uppercase sm:text-6xl">
           Reviva Pokémon{" "}
-          <span className="rounded-lg bg-navy px-2 text-poke-red-light">Red</span>,{" "}
-          <span className="rounded-lg bg-navy px-2 text-poke-blue-light">Blue</span> e{" "}
-          <span className="rounded-lg bg-navy px-2 text-poke-yellow">Yellow</span> em{" "}
-          <span className="inline-block rounded-xl border-2 border-navy bg-poke-yellow px-3 text-navy drop-shadow-none">
+          <span className="inline-block rounded-lg border-2 border-navy bg-poke-red-light px-2 text-navy">
+            Red
+          </span>
+          ,{" "}
+          <span className="inline-block rounded-lg border-2 border-navy bg-poke-blue-light px-2 text-navy">
+            Blue
+          </span>{" "}
+          e{" "}
+          <span className="inline-block rounded-lg border-2 border-navy bg-poke-yellow px-2 text-navy">
+            Yellow
+          </span>{" "}
+          agora em{" "}
+          <span className="inline-block rounded-xl border-2 border-navy bg-surface px-3 text-navy">
             3D
           </span>{" "}
-          — Agora no Android e PC
+          no Android e no PC
         </h1>
 
-        <p className="mx-auto mt-5 max-w-2xl rounded-full border-2 border-poke-yellow bg-surface px-5 py-3 text-sm font-bold text-navy sm:text-base">
-          O Pokémon da sua infância com visual remasterizado em 3D, pronto para você instalar e
-          voltar para Kanto em minutos.
+        <p className="mx-auto mt-5 max-w-2xl rounded-2xl border-2 border-navy bg-surface px-5 py-4 text-[15px] leading-relaxed font-bold text-navy sm:text-lg">
+          O Pokémon da sua infância, remasterizado em 3D. Instale em minutos e volte a explorar
+          Kanto hoje mesmo — sem console novo e sem complicação.
         </p>
+
 
         <HeroVideo />
 
