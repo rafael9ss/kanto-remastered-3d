@@ -13,7 +13,7 @@ export function Hero() {
         <img
           src={logoSmall}
           alt="Pokémon Remastered 2026"
-          className="mx-auto w-56 drop-shadow-[0_4px_0_var(--surface)] sm:w-72"
+          className="mx-auto w-56 drop-shadow-[0_4px_0_var(--aqua-deep)] sm:w-72"
           width={288}
           height={157}
           loading="eager"
