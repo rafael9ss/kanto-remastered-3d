@@ -8,7 +8,7 @@ export function Bonus() {
       <div className="text-center">
         <Eyebrow>Bônus</Eyebrow>
         <Title>E você ainda recebe 5 bônus</Title>
-        <p className="mt-4 text-sm font-bold text-surface">
+        <p className="mt-4 text-sm font-bold text-navy">
           Os bônus clássicos também funcionam no iOS.
         </p>
       </div>
@@ -40,7 +40,7 @@ export function Bonus() {
         ))}
       </div>
 
-      <p className="mt-8 text-center font-display text-2xl text-surface uppercase">
+      <p className="mt-8 text-center font-display text-2xl text-navy uppercase">
         R$ 255 em bônus incluídos
       </p>
 

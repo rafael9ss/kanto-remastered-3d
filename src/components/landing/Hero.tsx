@@ -22,10 +22,11 @@ export function Hero() {
           sizes="(max-width: 640px) 224px, 288px"
         />
 
-        <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-surface uppercase sm:text-6xl">
-          Reviva Pokémon <span className="text-poke-red">Red</span>,{" "}
-          <span className="text-poke-blue">Blue</span> e{" "}
-          <span className="text-poke-yellow">Yellow</span> em{" "}
+        <h1 className="mt-6 font-display text-[2rem] leading-[1.05] text-navy uppercase sm:text-6xl">
+          Reviva Pokémon{" "}
+          <span className="rounded-lg bg-navy px-2 text-poke-red-light">Red</span>,{" "}
+          <span className="rounded-lg bg-navy px-2 text-poke-blue-light">Blue</span> e{" "}
+          <span className="rounded-lg bg-navy px-2 text-poke-yellow">Yellow</span> em{" "}
           <span className="inline-block rounded-xl border-2 border-navy bg-poke-yellow px-3 text-navy drop-shadow-none">
             3D
           </span>{" "}
@@ -56,9 +57,11 @@ export function Hero() {
         />
 
 
-        <p className="mt-6 font-display text-sm text-surface uppercase">
-          <span className="text-poke-red">Red.</span> <span className="text-poke-blue">Blue.</span>{" "}
-          <span className="text-poke-yellow">Yellow.</span> A mesma nostalgia. Uma nova experiência.
+        <p className="mt-6 font-display text-sm text-navy uppercase">
+          <span className="rounded bg-navy px-1.5 text-poke-red-light">Red.</span>{" "}
+          <span className="rounded bg-navy px-1.5 text-poke-blue-light">Blue.</span>{" "}
+          <span className="rounded bg-navy px-1.5 text-poke-yellow">Yellow.</span> A mesma
+          nostalgia. Uma nova experiência.
         </p>
 
         <img
