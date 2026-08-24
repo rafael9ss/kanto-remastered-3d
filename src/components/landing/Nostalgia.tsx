@@ -50,7 +50,7 @@ export function Nostalgia() {
         </ul>
       </Card>
 
-      <p className="mt-8 text-center font-display text-xl text-surface uppercase sm:text-2xl">
+      <p className="mt-8 text-center font-display text-xl text-navy uppercase sm:text-2xl">
         Abra. Instale. Escolha sua versão. E volte para Kanto.
       </p>
 
