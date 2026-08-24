@@ -71,18 +71,19 @@ export function Hero() {
         />
 
 
-        <p className="mt-6 font-display text-sm leading-loose text-navy uppercase">
-          <span className="rounded border-2 border-navy bg-poke-red-light px-1.5 text-navy">
+        <p className="mx-auto mt-6 max-w-md text-balance font-display text-[13px] leading-[2] text-navy uppercase sm:text-sm">
+          <span className="whitespace-nowrap rounded border-2 border-navy bg-poke-red-light px-1.5 text-navy">
             Red.
           </span>{" "}
-          <span className="rounded border-2 border-navy bg-poke-blue-light px-1.5 text-navy">
+          <span className="whitespace-nowrap rounded border-2 border-navy bg-poke-blue-light px-1.5 text-navy">
             Blue.
           </span>{" "}
-          <span className="rounded border-2 border-navy bg-poke-yellow px-1.5 text-navy">
+          <span className="whitespace-nowrap rounded border-2 border-navy bg-poke-yellow px-1.5 text-navy">
             Yellow.
           </span>{" "}
           A mesma nostalgia. Uma nova aventura.
         </p>
+
 
 
         <img
